@@ -271,9 +271,6 @@ html.dark .contact-card-hover:hover .icon-box { background-color: var(--gold); c
     html.dark .theme-toggle:hover .icon-moon { transform: rotate(-18deg) scale(1.12); }
 }
 
-/* =====================================================================
-   PRESSED (while clicking)
-   ===================================================================== */
 :is(a, button).rounded-full:active { transform: translateY(0) scale(.97) !important; transition-duration: .1s; }
 .contact-card-hover:active, .rounded-2xl.border:active { transform: scale(.985); }
 header nav a:active, footer a:active { opacity: .7; }
@@ -284,9 +281,6 @@ header nav a:active, footer a:active { opacity: .7; }
 }
 
 
-/* Fix: feedback cards were clipped at the top when lifting on hover.
-   The scroll container (overflow-x-auto) also crops vertically, so it gets
-   extra room above/below; the negative margins keep the page layout unchanged. */
 .snap-x {
     padding-top: 1.25rem;
     margin-top: -1.25rem;
