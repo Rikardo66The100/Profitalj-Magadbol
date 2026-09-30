@@ -282,3 +282,14 @@ header nav a:active, footer a:active { opacity: .7; }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
+
+
+/* Fix: feedback cards were clipped at the top when lifting on hover.
+   The scroll container (overflow-x-auto) also crops vertically, so it gets
+   extra room above/below; the negative margins keep the page layout unchanged. */
+.snap-x {
+    padding-top: 1.25rem;
+    margin-top: -1.25rem;
+    padding-bottom: 2rem;
+    margin-bottom: -0.5rem;
+}
