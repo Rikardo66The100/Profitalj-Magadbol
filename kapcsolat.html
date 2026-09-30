@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+
+<head>
+    <!-- Google tag  -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXXXXXXXXX'); // IDE KELL A SAJÁT AZONOSÍTÓ GOOGLE ANALYTICSRŐL
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapcsolat| Profitálj magadból</title>
+    <meta name="description"
+        content="Lépj kapcsolatba velünk, töltsd ki a kérdőívet vagy kérj ingyenes 30 perces konzultációt.">
+
+    <!-- Open Graph / Facebook / Messenger SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://profitaljmagadbol.hu/index.html">
+    <meta property="og:title" content="Profitálj magadból | Önismereti írás és coaching">
+    <meta property="og:description"
+        content="Önismeret, tudatosság és változás. Segítek átlendülni az elakadásokon. Foglalj ingyenes 30 perces konzultációt!">
+    <meta property="og:image" content="https://profitaljmagadbol.hu/imgs/og-preview.jpg">
+   
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
+    <link rel="manifest" href="imgs/site.webmanifest">
+
+    <style>
+        .contact-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .contact-card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px -10px rgba(74, 68, 64, 0.15);
+            border-color: #8C7A6B;
+        }
+
+        .contact-card-hover:hover .icon-box {
+            background-color: #4A4440;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body class="bg-[#FBF9F5] text-[#2C2A29] font-sans antialiased text-base leading-relaxed flex flex-col min-h-screen">
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-[#FBF9F5]/90 backdrop-blur-md border-b border-[#EBE5DC]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-xl font-serif tracking-wider font-semibold text-[#4A4440]">
+                        PROFITÁLJ <span class="font-light text-[#8C7A6B]">MAGADBÓL</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 text-base font-medium tracking-wide">
+                    <a href="index.html" class="hover:text-[#8C7A6B] transition-colors">Kezdőlap</a>
+                    <a href="rolam.html" class="hover:text-[#8C7A6B] transition-colors">Rólam</a>
+                    <a href="dijak-es-tudnivalok.html" class="hover:text-[#8C7A6B] transition-colors">Díjak és
+                        tudnivalók</a>
+                    <a href="kapcsolat.html" class="text-[#8C7A6B] transition-colors">Kapcsolat</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGPn7DUKu09WFwmjWCrfzQe4144a1dG77gbnAA56dNV5AZtA/viewform?pli=1" target="_blank"
+                        class="bg-[#4A4440] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#332E2C] transition-all">Kérdőív
+                        kitöltése</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-[#4A4440]" aria-label="Menü megnyitása">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-[#FBF9F5] border-b border-[#EBE5DC] px-6 pt-3 pb-6 space-y-4 text-base">
+            <a href="index.html" class="block hover:text-[#8C7A6B]">Kezdőlap</a>
+            <a href="rolam.html" class="block hover:text-[#8C7A6B]">Rólam</a>
+            <a href="dijak-es-tudnivalok.html" class="block hover:text-[#8C7A6B]">Díjak és tudnivalók</a>
+            <a href="kapcsolat.html" class="block text-[#8C7A6B] font-semibold">Kapcsolat</a>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="flex-grow py-12 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+            <div class="text-center space-y-4 max-w-3xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl font-serif text-[#2C2A29]">Kapcsolat </h1>
+                <p class="text-base text-[#6B5E54] font-light">
+                    Keress bizalommal az alábbi elérhetőségeken, vagy töltsd ki az alábbi kérdőívet, hogy
+                    egyeztethessünk az ingyenes 30 perces első konzultációról!
+                </p>
+            </div>
+
+            <!-- HOVER EFFECT ELÉRHERŐSÉG KÁRTYÁK -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- 1. E-MAIL -->
+                <a href="mailto:info@profitaljmagadbol.hu"
+                    class="contact-card-hover bg-white p-8 rounded-3xl border border-[#EBE5DC] text-center space-y-4 block">
+                    <div
+                        class="icon-box w-16 h-16 rounded-2xl bg-[#F4F0EA] text-[#8C7A6B] flex items-center justify-center mx-auto transition-colors">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-xl text-[#2C2A29] font-medium">E-mail</h3>
+                        <p class="text-sm text-[#8C7A6B] mt-1">profitaljmagadbol@gmail.com</p>
+                    </div>
+                    <p class="text-xs text-[#6B5E54]">Írj nekem közvetlenül, 48 órán belül válaszolok.</p>
+                </a>
+
+                <!-- 2. TELEFON -->
+                <a href="tel:+36301234567"
+                    class="contact-card-hover bg-white p-8 rounded-3xl border border-[#EBE5DC] text-center space-y-4 block">
+                    <div
+                        class="icon-box w-16 h-16 rounded-2xl bg-[#F4F0EA] text-[#8C7A6B] flex items-center justify-center mx-auto transition-colors">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-xl text-[#2C2A29] font-medium">Telefon</h3>
+                        <p class="text-sm text-[#8C7A6B] mt-1">+36 (20) 465-0690</p>
+                    </div>
+                </a>
+
+                <!-- 3. SOCIAL MEDIA (INSTAGRAM & FACEBOOK LINKELHETŐ) -->
+                <div
+                    class="contact-card-hover bg-white p-8 rounded-3xl border border-[#EBE5DC] text-center space-y-4 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div
+                            class="icon-box w-16 h-16 rounded-2xl bg-[#F4F0EA] text-[#8C7A6B] flex items-center justify-center mx-auto transition-colors">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl text-[#2C2A29] font-medium">Írj rám</h3>
+                            <p class="text-xs text-[#6B5E54] mt-1">Napi inspirációk és tartalom</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center gap-3 pt-2">
+                        <a href="https://www.instagram.com/profitaljmagadbol/" target="_blank" rel="noopener noreferrer"
+                            class="px-4 py-2 bg-[#F4F0EA] hover:bg-[#4A4440] hover:text-white text-[#2C2A29] text-xs font-medium rounded-full transition-all border border-[#EBE5DC]">
+                            Instagram
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61594445890345" target="_blank" rel="noopener noreferrer"
+                            class="px-4 py-2 bg-[#F4F0EA] hover:bg-[#4A4440] hover:text-white text-[#2C2A29] text-xs font-medium rounded-full transition-all border border-[#EBE5DC]">
+                            Facebook
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- JELENTKEZÉSI FORMS (KÉRDŐÍV) -->
+            <section id="kerdoiv"
+                class="max-w-3xl mx-auto bg-white p-8 sm:p-12 rounded-3xl border border-[#EBE5DC] shadow-sm space-y-8">
+                <div class="text-center space-y-2">
+                    <h2 class="text-3xl font-serif text-[#2C2A29]">Jelentkezési kérdőív</h2>
+                    <p class="text-sm text-[#6B5E54]">Kérlek, töltsd ki az alábbi mezőket, hogy pontosabb képet kapjak
+                        az igényeidről!</p>
+                </div>
+
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-[#4A4440] mb-2">Teljes név *</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-3 bg-[#FBF9F5] border border-[#EBE5DC] rounded-xl focus:outline-none focus:border-[#8C7A6B] text-[#2C2A29]">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-[#4A4440] mb-2">E-mail cím
+                                *</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 bg-[#FBF9F5] border border-[#EBE5DC] rounded-xl focus:outline-none focus:border-[#8C7A6B] text-[#2C2A29]">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-[#4A4440] mb-2">Telefonszám</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-4 py-3 bg-[#FBF9F5] border border-[#EBE5DC] rounded-xl focus:outline-none focus:border-[#8C7A6B] text-[#2C2A29]">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-[#4A4440] mb-2">Melyik szolgáltatás
+                            érdekel? *</label>
+                        <select id="service" name="service" required
+                            class="w-full px-4 py-3 bg-[#FBF9F5] border border-[#EBE5DC] rounded-xl focus:outline-none focus:border-[#8C7A6B] text-[#2C2A29]">
+                            <option value="">Kérlek válassz...</option>
+                            <option value="life-coaching">Egyéni intuitív life coaching</option>
+                            <option value="life-coaching-berlet">Life coaching bérlet (5 alkalom)</option>
+                            <option value="ifjusagi-mentoralas">Ifjúsági mentorálás</option>
+                            <option value="korrepetalas">Magyar nyelv és irodalom korrepetálás</option>
+                            <option value="palyaorientacio">Pályaorientációs konzultáció</option>
+                            <option value="elso-beszelgetes">30 perces ingyenes első beszélgetés</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-[#4A4440] mb-2">Rövid összefoglaló,
+                            miben kérsz segítséget? *</label>
+                        <textarea id="message" name="message" rows="4" required
+                            class="w-full px-4 py-3 bg-[#FBF9F5] border border-[#EBE5DC] rounded-xl focus:outline-none focus:border-[#8C7A6B] text-[#2C2A29]"></textarea>
+                    </div>
+
+                    <div class="flex items-start space-x-3 pt-2">
+                        <input type="checkbox" id="privacy" name="privacy" required
+                            class="mt-1 h-4 w-4 rounded border-[#EBE5DC] text-[#4A4440] focus:ring-[#8C7A6B]">
+                        <label for="privacy" class="text-xs text-[#6B5E54]">
+                            Elfogadom az <a href="adatkezelesi-tajekoztato.html" target="_blank"
+                                class="underline hover:text-[#2C2A29]">Adatkezelési Tájékoztatót</a> és az <a
+                                href="aszf.html" target="_blank" class="underline hover:text-[#2C2A29]">Általános
+                                Szerződési Feltételeket (ÁSZF)</a>.
+                        </label>
+                    </div>
+
+                    <div>
+                        <button type="submit"
+                            class="w-full bg-[#4A4440] text-white py-4 rounded-full text-base font-medium hover:bg-[#332E2C] transition-all shadow-md">
+                            Jelentkezés elküldése
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#2C2A29] text-[#FBF9F5] py-12">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="text-lg font-serif tracking-wider font-semibold">PROFITÁLJ MAGADBÓL</span>
+                <p class="text-xs text-[#A89F95] mt-1">&copy; 2026 Minden jog fenntartva.</p>
+            </div>
+            <div
+                class="flex flex-wrap justify-center md:justify-end items-center gap-x-6 gap-y-2 text-sm text-[#A89F95]">
+                <a href="index.html" class="hover:text-white transition-colors">Kezdőlap</a>
+                <a href="rolam.html" class="hover:text-white transition-colors">Rólam</a>
+                <a href="dijak-es-tudnivalok.html" class="hover:text-white transition-colors">Díjak és tudnivalók</a>
+                <a href="kapcsolat.html" class="hover:text-white transition-colors">Kapcsolat</a>
+                <a href="aszf.html" class="hover:text-white transition-colors">ÁSZF</a>
+                <a href="adatkezelesi-tajekoztato.html" class="hover:text-white transition-colors">Adatkezelés</a>
+                <a href="impresszum.html" class="hover:text-white transition-colors">Impresszum</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SÜTI (COOKIE) BANNER -->
+    <div id="cookie-banner"
+        class="fixed bottom-0 inset-x-0 z-50 bg-[#2C2A29] text-[#FBF9F5] p-4 sm:p-6 shadow-2xl border-t border-[#4A4440] hidden">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs sm:text-sm text-[#A89F95] text-center sm:text-left">
+                Ez a weboldal sütiket (cookie-kat) használ a jobb felhasználói élmény és a weboldal működésének
+                biztosítása érdekében. A részletekről az <a href="adatkezelesi-tajekoztato.html"
+                    class="underline text-white hover:text-[#8C7A6B]">Adatkezelési Tájékoztatóban</a> tájékozódhatsz.
+            </p>
+            <div class="flex gap-3">
+                <button id="accept-cookies"
+                    class="bg-[#8C7A6B] text-white px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium hover:bg-[#726255] transition-all whitespace-nowrap cursor-pointer">
+                    Elfogadom
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobil menü
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Süti kezelő logika
+        window.addEventListener('DOMContentLoaded', () => {
+            if (!localStorage.getItem('cookieConsent')) {
+                document.getElementById('cookie-banner').classList.remove('hidden');
+            }
+        });
+
+        document.getElementById('accept-cookies').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookie-banner').classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>

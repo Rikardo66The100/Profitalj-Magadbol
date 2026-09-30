@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+
+<head>
+    <!-- Google tag  -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXXXXXXXXX'); // IDE KELL A SAJÁT AZONOSÍTÓ GOOGLE ANALYTICSRŐL
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rólam | Profitálj magadból</title>
+    <meta name="description"
+        content="A Profitálj magadból küldetése, hogy segítsen felfedezni a benned rejlő erőforrásokat és fejleszteni az önismeretedet.">
+
+    <!-- Open Graph / Facebook / Messenger SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://profitaljmagadbol.hu/index.html">
+    <meta property="og:title" content="Profitálj magadból | Önismereti írás és coaching">
+    <meta property="og:description"
+        content="Önismeret, tudatosság és változás. Segítek átlendülni az elakadásokon. Foglalj ingyenes 30 perces konzultációt!">
+    <meta property="og:image" content="https://profitaljmagadbol.hu/imgs/og-preview.jpg">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
+    <link rel="manifest" href="imgs/site.webmanifest">
+</head>
+
+<body class="bg-[#FBF9F5] text-[#2C2A29] font-sans antialiased text-base leading-relaxed">
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-[#FBF9F5]/90 backdrop-blur-md border-b border-[#EBE5DC]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-xl font-serif tracking-wider font-semibold text-[#4A4440]">
+                        PROFITÁLJ <span class="font-light text-[#8C7A6B]">MAGADBÓL</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 text-base font-medium tracking-wide">
+                    <a href="index.html" class="hover:text-[#8C7A6B] transition-colors">Kezdőlap</a>
+                    <a href="rolam.html" class="text-[#8C7A6B] transition-colors">Rólam</a>
+                    <a href="dijak-es-tudnivalok.html" class="hover:text-[#8C7A6B] transition-colors">Díjak és
+                        tudnivalók</a>
+                    <a href="kapcsolat.html" class="hover:text-[#8C7A6B] transition-colors">Kapcsolat</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGPn7DUKu09WFwmjWCrfzQe4144a1dG77gbnAA56dNV5AZtA/viewform?pli=1" target="_blank"
+                        class="bg-[#4A4440] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#332E2C] transition-all">Kérdőív
+                        kitöltése</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-[#4A4440]" aria-label="Menü megnyitása">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-[#FBF9F5] border-b border-[#EBE5DC] px-6 pt-3 pb-6 space-y-4 text-base">
+            <a href="index.html" class="block hover:text-[#8C7A6B]">Kezdőlap</a>
+            <a href="rolam.html" class="block text-[#8C7A6B] font-semibold">Rólam</a>
+            <a href="dijak-es-tudnivalok.html" class="block hover:text-[#8C7A6B]">Díjak és tudnivalók</a>
+            <a href="kapcsolat.html" class="block hover:text-[#8C7A6B]">Kapcsolat</a>
+        </div>
+    </header>
+
+    <!-- MAIN (Kizárólag szöveg, letisztult kártyás/szekciós felosztásban) -->
+    <main class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+            <div class="text-center space-y-2 mb-12">
+                <h1 class="text-4xl sm:text-5xl font-serif text-[#2C2A29]">Rólam</h1>
+                <p class="text-sm uppercase tracking-widest text-[#8C7A6B]">A Profitálj magadból története</p>
+            </div>
+
+            <!-- 1. KÁRTYA: Küldetés -->
+            <div class="bg-[#F4F0EA] p-8 sm:p-12 rounded-3xl border border-[#EBE5DC] shadow-sm">
+                <p class="text-lg sm:text-xl font-serif text-[#2C2A29] leading-relaxed">
+                    A Profitálj magadból küldetése, hogy segítsen felfedezni a benned rejlő erőforrásokat, fejleszteni
+                    az önismeretedet és olyan készségeket kialakítani, amelyekkel nemcsak a munkádban, hanem az életed
+                    minden területén előreléphetsz.
+                </p>
+            </div>
+
+            <!-- 2. KÁRTYA: Tanári tapasztalat és elindulás -->
+            <div class="bg-white p-8 sm:p-12 rounded-3xl border border-[#EBE5DC] shadow-sm space-y-6">
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    Tanárként sokszor hallottam magamról, hogy élményórákat tartok. Talán azért, mert mindig is fontos
+                    volt számomra, hogy ne csupán ismereteket adjak át, hanem gondolkodni tanítsak. Szeretem megmozgatni
+                    az emberek gondolatait, rávezetni őket arra, hogy egy probléma mögött ne csak a nehézséget lássák,
+                    hanem felfedezzék a lehetőséget és a megoldáshoz vezető utat is.
+                </p>
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    Sokáig természetes volt számomra, hogy ezt a szemléletet a tanítványaimmal alkalmazom. Aztán egyre
+                    inkább észrevettem, hogy nemcsak a diákjaim, hanem a körülöttem lévő emberek is gyakran hozzám
+                    fordulnak egy-egy élethelyzettel, döntési dilemmával vagy bizonytalansággal.
+                </p>
+                <div class="bg-[#FBF9F5] p-6 rounded-2xl border border-[#EBE5DC] space-y-3">
+                    <p class="text-base text-[#6B5E54] leading-relaxed">
+                        Egy emlékezetes pillanat volt, amikor egy barátnőm egy beszélgetésünk során a kérdéseim
+                        segítségével jutott el egy fontos felismeréshez. Megszületett benne az a bizonyos "AHA"-élmény,
+                        amikor hirtelen összeállnak a dolgok, és tisztábban látjuk a saját lehetőségeinket. Akkor azt
+                        mondta nekem:
+                    </p>
+                    <p class="font-serif italic text-lg text-[#2C2A29]">
+                        „Olyan jókat tudsz kérdezni és mondani. Miért nem ebből élsz?”
+                    </p>
+                </div>
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    Ez a mondat elindított egy új úton: a coaching felé. Mert rájöttem, hogy ugyanazt szeretném tenni,
+                    amit tanárként mindig is fontosnak tartottam: segíteni az embereknek felfedezni a bennük rejlő
+                    értékeket és lehetőségeket.
+                </p>
+            </div>
+
+            <!-- 3. KÁRTYA: Kiknek szól? -->
+            <div class="bg-white p-8 sm:p-12 rounded-3xl border border-[#EBE5DC] shadow-sm space-y-6">
+                <h2 class="text-2xl font-serif text-[#2C2A29]">Kiknek szól a Profitálj magadból?</h2>
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    A Profitálj magadból azért született, hogy támogatást nyújtson azoknak, akik többre vágynak
+                    önmaguktól és az életüktől. Azoknak, akik gyakran kételkednek magukban, akik önbizalomhiánnyal
+                    küzdenek, vagy akik szeretnék jobban érteni saját értékeiket és erősségeiket.
+                </p>
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    Azoknak is szól, akik sok mindent elértek már, mégis egyszer csak felteszik maguknak a kérdést:
+                    <strong>"Ennyi volt?"</strong> Akik érzik, hogy változásra vágynak, de még nem látják pontosan az új
+                    irányt. Akik új élethelyzetbe kerültek – például amikor a gyerekek kirepültek –, vagy akik
+                    szeretnének valami teljesen újba kezdeni.
+                </p>
+            </div>
+
+            <!-- 4. KÁRTYA: A coaching mint közös gondolkodás -->
+            <div class="bg-[#F4F0EA] p-8 sm:p-12 rounded-3xl border border-[#EBE5DC] shadow-sm space-y-6">
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    Hiszem, hogy minden életszakasz tartogat új lehetőségeket. Néha nem új válaszokra van szükségünk,
+                    hanem olyan jó kérdésekre, amelyek közelebb vezetnek önmagunkhoz.
+                </p>
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    Ebben szeretnélek támogatni: hogy felismerd az értékeidet, megerősítsd a magadba vetett hitedet, és
+                    megtaláld azt az utat, amelyen valóban önmagadból tudsz építkezni.
+                </p>
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    Számomra a coaching nem kész válaszokat jelent. Inkább olyan közös gondolkodást, amelynek során
+                    megtalálod a saját válaszaidat, felismered a lehetőségeidet, és megtanulod azokat tudatosan
+                    használni.
+                </p>
+                <div class="pt-4 border-t border-[#EBE5DC]">
+                    <p class="text-lg font-serif text-[#2C2A29] leading-relaxed">
+                        Mert amikor önmagad legjobb változatává válsz, akkor nemcsak sikeresebb leszel, hanem olyan
+                        értéket teremtesz, amelyből hosszú távon is építkezhetsz. Ezt jelenti számomra a Profitálj
+                        magadból.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center pt-6">
+                <a href="kapcsolat.html"
+                    class="inline-flex justify-center items-center bg-[#4A4440] text-white px-10 py-4 rounded-full text-base font-medium hover:bg-[#332E2C] transition-all shadow-md">
+                    Kérek egy első beszélgetést
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#2C2A29] text-[#FBF9F5] py-12">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="text-lg font-serif tracking-wider font-semibold">PROFITÁLJ MAGADBÓL</span>
+                <p class="text-xs text-[#A89F95] mt-1">&copy; 2026 Minden jog fenntartva.</p>
+            </div>
+            <div
+                class="flex flex-wrap justify-center md:justify-end items-center gap-x-6 gap-y-2 text-sm text-[#A89F95]">
+                <a href="index.html" class="hover:text-white transition-colors">Kezdőlap</a>
+                <a href="rolam.html" class="hover:text-white transition-colors">Rólam</a>
+                <a href="dijak-es-tudnivalok.html" class="hover:text-white transition-colors">Díjak és tudnivalók</a>
+                <a href="kapcsolat.html" class="hover:text-white transition-colors">Kapcsolat</a>
+                <a href="aszf.html" class="hover:text-white transition-colors">ÁSZF</a>
+                <a href="adatkezelesi-tajekoztato.html" class="hover:text-white transition-colors">Adatkezelés</a>
+                <a href="impresszum.html" class="hover:text-white transition-colors">Impresszum</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

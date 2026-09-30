@@ -1,0 +1,58 @@
+/* Responsibility for website */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Responsibility for images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.25rem !important;
+        line-height: 1.2 !important;
+    }
+    h2 {
+        font-size: 1.75rem !important;
+    }
+}
+
+/* Small animations */
+a, button {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Méretezés */
+
+html {
+    font-size: 112.5%; 
+}
+
+body {
+    font-size: 1rem; 
+    line-height: 1.6; 
+}
+
+.text-xs {
+    font-size: 0.875rem /* 14px */ !important;
+    line-height: 1.25rem !important;
+}
+
+.text-sm {
+    font-size: 1rem /* 16px */ !important;
+    line-height: 1.5rem !important;
+}

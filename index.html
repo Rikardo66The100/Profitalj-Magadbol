@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+
+<head>
+    <!-- Google tag  -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXXXXXXXXX'); // IDE KELL A SAJÁT AZONOSÍTÓ GOOGLE ANALYTICSRŐL
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profitálj magadból | Önismereti írás és coaching</title>
+    <meta name="description"
+        content="Önismeret, tudatosság és változás. Segítek átlendülni az elakadásokon egyéni life coaching és mentorálás segítségével. Ingyenes 30 perces konzultáció.">
+
+    <!-- Open Graph / Facebook / Messenger SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://profitaljmagadbol.hu/index.html">
+    <meta property="og:title" content="Profitálj magadból | Önismereti írás és coaching">
+    <meta property="og:description"
+        content="Önismeret, tudatosság és változás. Segítek átlendülni az elakadásokon. Foglalj ingyenes 30 perces konzultációt!">
+    <meta property="og:image" content="https://profitaljmagadbol.hu/imgs/og-preview.jpg">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
+    <link rel="manifest" href="imgs/site.webmanifest">
+</head>
+
+<body class="bg-[#FBF9F5] text-[#2C2A29] font-sans antialiased text-base leading-relaxed flex flex-col min-h-screen">
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-[#FBF9F5]/90 backdrop-blur-md border-b border-[#EBE5DC]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-xl font-serif tracking-wider font-semibold text-[#4A4440]">
+                        PROFITÁLJ <span class="font-light text-[#8C7A6B]">MAGADBÓL</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 text-base font-medium tracking-wide">
+                    <a href="index.html" class="text-[#8C7A6B] transition-colors">Kezdőlap</a>
+                    <a href="rolam.html" class="hover:text-[#8C7A6B] transition-colors">Rólam</a>
+                    <a href="dijak-es-tudnivalok.html" class="hover:text-[#8C7A6B] transition-colors">Díjak és
+                        tudnivalók</a>
+                    <a href="kapcsolat.html" class="hover:text-[#8C7A6B] transition-colors">Kapcsolat</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGPn7DUKu09WFwmjWCrfzQe4144a1dG77gbnAA56dNV5AZtA/viewform?pli=1"
+                        target="_blank"
+                        class="bg-[#4A4440] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#332E2C] transition-all">Kérdőív
+                        kitöltése</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-[#4A4440]" aria-label="Menü megnyitása">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-[#FBF9F5] border-b border-[#EBE5DC] px-6 pt-3 pb-6 space-y-4 text-base">
+            <a href="index.html" class="block text-[#8C7A6B] font-semibold">Kezdőlap</a>
+            <a href="rolam.html" class="block hover:text-[#8C7A6B]">Rólam</a>
+            <a href="dijak-es-tudnivalok.html" class="block hover:text-[#8C7A6B]">Díjak és tudnivalók</a>
+            <a href="kapcsolat.html" class="block hover:text-[#8C7A6B]">Kapcsolat</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="py-12 md:py-20 bg-[#FBF9F5]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-block bg-[#F4F0EA] px-4 py-1.5 rounded-full border border-[#EBE5DC]">
+                    <span class="text-sm tracking-widest uppercase font-medium text-[#8C7A6B]">
+                        Önismeret • Tudatosság • Változás
+                    </span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#2C2A29] leading-tight">
+                    Segíteni hivatás
+                </h1>
+                <p class="text-lg text-[#6B5E54] font-light leading-relaxed">
+                    Tudod, hogy változtatni szeretnél. Mégsem lépsz. Lehet, hogy nem a bizonytalanság a problémád, hanem
+                    ahogy a félelmedre reagálsz.
+                </p>
+                <p class="text-base text-[#6B5E54] font-light leading-relaxed">
+                    Lehet, hogy nem azért nem lépsz, mert nem tudod, mit szeretnél, hanem azért, mert az agyad veszélyt
+                    lát abban, amit még nem ismer.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                    <a href="kapcsolat.html"
+                        class="inline-flex justify-center items-center bg-[#4A4440] text-white px-8 py-4 rounded-full text-base font-medium hover:bg-[#332E2C] transition-all text-center shadow-md">
+                        Kérek egy első beszélgetést
+                    </a>
+                    <a href="dijak-es-tudnivalok.html"
+                        class="inline-flex justify-center items-center bg-[#F4F0EA] border border-[#D4C5B9] text-[#2C2A29] px-8 py-4 rounded-full text-base font-medium hover:bg-[#EBE5DC] transition-all text-center">
+                        Díjak és tudnivalók
+                    </a>
+                </div>
+                <p class="text-sm text-[#8C7A6B] italic pt-1">
+                    Az első beszélgetés 30 perc és ingyenes.
+                </p>
+            </div>
+
+            <div class="lg:col-span-5 flex justify-center items-center">
+                <div
+                    class="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden border border-[#EBE5DC] shadow-xl bg-[#F4F0EA] flex items-center justify-center p-2">
+                    <img src="imgs/portré.webp" alt="" class="w-full h-full object-contain rounded-2xl">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FŐ TARTALOM -->
+    <main class="space-y-16 py-12 flex-grow">
+
+        <!-- BELSŐ HANG SZEKCIÓ -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-[#F4F0EA] p-8 sm:p-12 rounded-3xl border border-[#EBE5DC] space-y-6">
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    Minél tovább vársz, annál könnyebb elhinni, hogy talán tényleg nem neked való. Ilyenkor hagyod, hogy
+                    a félelem irányítson, s halkan a belső hangod ilyeneket mond:
+                </p>
+
+                <div class="border-l-4 border-[#8C7A6B] pl-6 py-2 italic text-[#4A4440] space-y-3 font-serif text-lg">
+                    <p>„Majd ha bátrabb leszek.”</p>
+                    <p>„Majd ha biztosabb leszek magamban.”</p>
+                    <p>„Majd ha eljön a megfelelő idő.”</p>
+                </div>
+
+                <p class="text-lg font-serif text-[#2C2A29] font-medium pt-2">Ismerős?</p>
+
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    Közben telnek a hetek, a hónapok, az évek. Te pedig ugyanott állsz, miközben egyre erősebben érzed:
+                </p>
+
+                <p class="text-xl font-serif italic text-[#2C2A29] font-semibold">
+                    „Nem akarom így folytatni.”
+                </p>
+
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    S jön a megbánás, a bűntudat, hogy megint elmulasztottál egy jó lehetőséget.
+                </p>
+
+                <div class="bg-white p-6 rounded-2xl border border-[#EBE5DC] space-y-2 text-[#4A4440] font-light">
+                    <p>Maradtál s rossz házasságodban.</p>
+                    <p>Más kapta meg helyetted az állást.</p>
+                    <p>Mégsem íratkoztál be arra a tanfolyamra.</p>
+                    <p>Nem kértél időpontot a szakrendelőben.</p>
+                    <p>Nem álltál ki magadért a munkahelyeden.</p>
+                </div>
+
+                <p class="text-base text-[#6B5E54] font-medium">
+                    Úgy érzed, újra kudarcot vallottál saját magad előtt.
+                </p>
+            </div>
+        </section>
+
+        <!-- MI TÖRTÉNIK VALÓJÁBAN? -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <h2 class="text-3xl sm:text-4xl font-serif text-[#2C2A29] text-center">Mi történik valójában?</h2>
+
+            <div class="bg-white p-8 sm:p-10 rounded-3xl border border-[#EBE5DC] space-y-6 shadow-sm">
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    Amikor valami újba kezdenél, az agyad nemcsak a lehetőséget érzékeli, hanem a bizonytalanságot is.
+                    És a bizonytalanságot könnyen veszélyként értelmezi.
+                </p>
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    Ezért elkezded keresni a kockázatokat, elkezded felvázolni a negatív forgatókönyveket:
+                </p>
+
+                <ul class="space-y-3 bg-[#FBF9F5] p-6 rounded-2xl border border-[#EBE5DC] font-serif text-[#2C2A29]">
+                    <li class="flex items-center space-x-3">
+                        <span class="text-[#8C7A6B]">•</span>
+                        <span>Mi van, ha nem sikerül?</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="text-[#8C7A6B]">•</span>
+                        <span>Mi van, ha hibázom?</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="text-[#8C7A6B]">•</span>
+                        <span>Mi van, ha kudarcot vallok?</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="text-[#8C7A6B]">•</span>
+                        <span>Mi van, ha később megbánom?</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="text-[#8C7A6B]">•</span>
+                        <span>Mi van, ha már túl késő?</span>
+                    </li>
+                </ul>
+
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    A figyelmed lassan elmozdul arról, amit nyerhetnél, arra, amit elveszíthetsz.
+                </p>
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    És megszületik a legbiztonságosabbnak tűnő döntés: <strong>nem csinálsz semmit.</strong>
+                </p>
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    Pontosabban ugyanazt csinálod, mit eddig mindig:
+                </p>
+
+                <div class="flex flex-wrap gap-3 font-medium text-[#4A4440]">
+                    <span class="bg-[#F4F0EA] px-4 py-2 rounded-xl border border-[#EBE5DC]">Halogatsz.</span>
+                    <span class="bg-[#F4F0EA] px-4 py-2 rounded-xl border border-[#EBE5DC]">Elkerülsz.</span>
+                    <span class="bg-[#F4F0EA] px-4 py-2 rounded-xl border border-[#EBE5DC]">Bizonytalankodsz.</span>
+                </div>
+
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    Meggyőzöd magad arról, hogy jól van ez így. Csakhogy a nem döntés is döntés.
+                </p>
+            </div>
+        </section>
+
+        <!-- A "MAJD HA..."  -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-[#F4F0EA] p-8 sm:p-12 rounded-3xl border border-[#EBE5DC] space-y-6">
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    A félelem egyik legnagyobb csapdája, hiszen nem mindig azt mondja „Ne tedd!”, sokkal gyakrabban ezt
+                    mondja: <strong>„Még ne.”</strong> És máris belekerülsz a „majd ha…”-válaszok spiráljába.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[#4A4440] font-light">
+                    <div class="bg-white p-4 rounded-xl border border-[#EBE5DC]">Majd ha több pénzem lesz.</div>
+                    <div class="bg-white p-4 rounded-xl border border-[#EBE5DC]">Majd ha több időm lesz.</div>
+                    <div class="bg-white p-4 rounded-xl border border-[#EBE5DC]">Majd ha magabiztosabb leszek.</div>
+                    <div class="bg-white p-4 rounded-xl border border-[#EBE5DC]">Majd ha a gyerekek nagyobbak lesznek.
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-[#EBE5DC] sm:col-span-2">Majd ha biztosan tudom,
+                        mit akarok.</div>
+                </div>
+
+                <p class="text-base text-[#6B5E54] leading-relaxed">
+                    És közben vársz arra a pillanatra, amikor végre nem félsz. Csakhogy az első lépéshez nem feltétlenül
+                    a félelem eltűnésére van szükséged, hanem arra, hogy megtanuld kezelni.
+                </p>
+            </div>
+        </section>
+
+        <!-- REFLEKTÍV KÉRDÉSEK -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
+            <h2 class="text-3xl font-serif text-[#2C2A29]">Készen állsz megnézni, mi van a „majd ha ...” mögött?</h2>
+            <p class="text-lg text-[#6B5E54] font-serif italic">
+                Gondolkoztál már azon, hogy a félelem miben segít és mibe kerül?
+            </p>
+            <p class="text-base text-[#6B5E54] leading-relaxed max-w-2xl mx-auto">
+                Mert rövid távon valóban megóv téged, hosszú távon viszont lehetőségektől foszt meg.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left pt-4">
+                <div class="bg-white p-8 rounded-3xl border border-[#EBE5DC] shadow-sm space-y-3">
+                    <h3 class="text-xl font-serif text-[#2C2A29]">Mi lenne, ha...</h3>
+                    <p class="text-base text-[#6B5E54] font-light">...nem a félelmed döntene helyetted?</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-[#EBE5DC] shadow-sm space-y-3">
+                    <h3 class="text-xl font-serif text-[#2C2A29]">Mi lenne, ha...</h3>
+                    <p class="text-base text-[#6B5E54] font-light">...meg tudnád különböztetni azt, amit valóban nem
+                        akarsz attól, amit csak azért nem mersz megtenni, mert félsz a következményektől?</p>
+                </div>
+            </div>
+
+            <p class="text-xl font-serif text-[#2C2A29] pt-4">Ez óriási különbség.</p>
+            <p class="text-base text-[#6B5E54] leading-relaxed max-w-2xl mx-auto">
+                Mert lehet, hogy nem az életed rossz. Lehet, hogy egyszerűen túl régóta alkalmazkodsz hozzá.
+            </p>
+            <div class="bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] inline-block mt-4">
+                <p class="text-lg font-serif text-[#2C2A29] font-medium">
+                    Inkább azt kérdezd meg magadtól: Milyen lesz az életem, ha minden marad a régiben?
+                </p>
+            </div>
+            <p class="text-base text-[#6B5E54] pt-2">
+                Ne várj arra, hogy elmúljon a félelem. Nézzük meg, mi tart vissza.
+            </p>
+        </section>
+
+        <!-- A COACHING FOLYAMATA -->
+        <section class="bg-[#F4F0EA] py-16 border-y border-[#EBE5DC]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                <div class="text-center space-y-4">
+                    <h2 class="text-3xl font-serif text-[#2C2A29]">A coaching megközelítése</h2>
+                    <p class="text-base text-[#6B5E54] leading-relaxed max-w-2xl mx-auto">
+                        A coachingban nem azt keresem, hogyan győzd le magad, hanem azt, hogy megértsd magad.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-[#EBE5DC] space-y-4 shadow-sm">
+                    <p class="font-serif text-lg text-[#2C2A29] mb-4">Együtt feltárjuk:</p>
+                    <ul class="space-y-3 text-base text-[#6B5E54] font-light">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-[#8C7A6B] font-bold">•</span>
+                            <span>mitől félsz valójában,</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-[#8C7A6B] font-bold">•</span>
+                            <span>milyen gondolatok tartanak vissza,</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-[#8C7A6B] font-bold">•</span>
+                            <span>milyen régi minták működnek benned,</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-[#8C7A6B] font-bold">•</span>
+                            <span>mi az, amire tudsz támaszkodni,</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-[#8C7A6B] font-bold">•</span>
+                            <span>mi az, amit mások elvárásai miatt csinálsz,</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-[#8C7A6B] font-bold">•</span>
+                            <span>és mi az, amit valóban te szeretnél.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4 text-center">
+                    <p class="text-lg font-serif text-[#2C2A29]">
+                        Nem kész válaszokat adok. Kérdésekkel segítek eljutni a saját válaszaidhoz.
+                    </p>
+                    <p class="text-base text-[#6B5E54] leading-relaxed max-w-2xl mx-auto">
+                        Mert amikor már pontosan látod, mi tart vissza, sokkal könnyebb eldönteni azt is: maradsz vagy
+                        elindulsz.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KÖVETKEZŐ LÉPÉS -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <h2 class="text-3xl font-serif text-[#2C2A29]">Nem kell tudnod az egész utat.</h2>
+            <p class="text-lg text-[#6B5E54] font-serif">Elég, ha megtalálod a következő lépést.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left pt-2">
+                <div class="bg-white p-5 rounded-2xl border border-[#EBE5DC] text-center text-[#6B5E54]">Lehet, hogy ez
+                    egy beszélgetés.</div>
+                <div class="bg-white p-5 rounded-2xl border border-[#EBE5DC] text-center text-[#6B5E54]">Lehet, hogy egy
+                    döntés.</div>
+                <div class="bg-white p-5 rounded-2xl border border-[#EBE5DC] text-center text-[#6B5E54]">Lehet, hogy egy
+                    régóta halogatott telefon.</div>
+                <div
+                    class="bg-white p-5 rounded-2xl border border-[#EBE5DC] text-center text-[#6B5E54] sm:col-span-2 md:col-span-1">
+                    Lehet, hogy ez egy ímél.</div>
+                <div
+                    class="bg-white p-5 rounded-2xl border border-[#EBE5DC] text-center text-[#6B5E54] sm:col-span-2 md:col-span-2">
+                    És lehet, hogy végre kimondod: „Ezt már nem akarom tovább így.”</div>
+            </div>
+
+            <p class="text-xl font-serif text-[#2C2A29] pt-4">És lehet, hogy éppen itt kezdődik valami új.</p>
+
+            <div class="bg-[#F4F0EA] p-8 sm:p-10 rounded-3xl border border-[#EBE5DC] space-y-6 mt-6">
+                <h3 class="text-2xl font-serif text-[#2C2A29]">Profitálj magadból</h3>
+                <p class="text-base text-[#6B5E54] leading-relaxed max-w-xl mx-auto">
+                    Önismereti coaching neked, aki már érzi, hogy változtatna, de még nem látja tisztán, hogyan. Ha
+                    készen állsz arra, hogy ne a félelmed mondja meg, merre mehetsz tovább, kezdjük azzal, ami most
+                    benned van.
+                </p>
+                <div>
+                    <a href="kapcsolat.html"
+                        class="inline-flex justify-center items-center bg-[#4A4440] text-white px-10 py-4 rounded-full text-base font-medium hover:bg-[#332E2C] transition-all shadow-md">
+                        Kérek egy első beszélgetést
+                    </a>
+                </div>
+                <p class="text-xs text-[#8C7A6B]">Profitálj Magadból – Önismereti írás és coaching</p>
+            </div>
+        </section>
+
+        <!-- VISSZAJELZÉSEK -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 border-t border-[#EBE5DC]">
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+                <h2 class="text-2xl font-serif text-[#2C2A29]">Visszajelzések</h2>
+                <p class="text-sm text-[#8C7A6B]">Tapasztalatok a közös munkáról</p>
+            </div>
+
+            <div class="flex overflow-x-auto md:grid md:grid-cols-4 gap-6 pb-6 snap-x">
+
+                <div
+                    class="min-w-[260px] max-w-[300px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
+                    <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
+                        „Határozott, mégis rendkívül empatikus támogatást kaptam. Mindenkinek tiszta szívből ajánlom.”
+                    </p>
+                    <p class="font-medium text-xs text-[#2C2A29]">— Tamás, 45</p>
+                </div>
+
+                <div
+                    class="min-w-[260px] max-w-[300px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
+                    <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
+                        „Sokkal tisztábban látom a céljaimat és a saját működésemet. Végre mertem változtatni!”
+                    </p>
+                    <p class="font-medium text-xs text-[#2C2A29]">— Anna, 38</p>
+                </div>
+
+                <div
+                    class="min-w-[260px] max-w-[300px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
+                    <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
+                        „A konzultációk alatt olyan biztonságos tér teremtődött, ahol végre le mertem tenni a felesleges
+                        terheimet.”
+                    </p>
+                    <p class="font-medium text-xs text-[#2C2A29]">— Katalin, 42</p>
+                </div>
+
+                <div
+                    class="min-w-[260px] max-w-[300px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
+                    <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
+                        „Gyakorlatias, mégis mély önismereti utazás volt. Hatalmas lendületet adott a mindennapokhoz.”
+                    </p>
+                    <p class="font-medium text-xs text-[#2C2A29]">— Péter, 31</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#2C2A29] text-[#FBF9F5] py-12">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="text-lg font-serif tracking-wider font-semibold">PROFITÁLJ MAGADBÓL</span>
+                <p class="text-xs text-[#A89F95] mt-1">&copy; 2026 Minden jog fenntartva.</p>
+            </div>
+            <div
+                class="flex flex-wrap justify-center md:justify-end items-center gap-x-6 gap-y-2 text-sm text-[#A89F95]">
+                <a href="index.html" class="hover:text-white transition-colors">Kezdőlap</a>
+                <a href="rolam.html" class="hover:text-white transition-colors">Rólam</a>
+                <a href="dijak-es-tudnivalok.html" class="hover:text-white transition-colors">Díjak és tudnivalók</a>
+                <a href="kapcsolat.html" class="hover:text-white transition-colors">Kapcsolat</a>
+                <a href="aszf.html" class="hover:text-white transition-colors">ÁSZF</a>
+                <a href="adatkezelesi-tajekoztato.html" class="hover:text-white transition-colors">Adatkezelés</a>
+                <a href="impresszum.html" class="hover:text-white transition-colors">Impresszum</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SÜTI (COOKIE) BANNER -->
+    <div id="cookie-banner"
+        class="fixed bottom-0 inset-x-0 z-50 bg-[#2C2A29] text-[#FBF9F5] p-4 sm:p-6 shadow-2xl border-t border-[#4A4440] hidden">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs sm:text-sm text-[#A89F95] text-center sm:text-left">
+                Ez a weboldal sütiket (cookie-kat) használ a jobb felhasználói élmény és a weboldal működésének
+                biztosítása érdekében. A részletekről az <a href="adatkezelesi-tajekoztato.html"
+                    class="underline text-white hover:text-[#8C7A6B]">Adatkezelési Tájékoztatóban</a> tájékozódhatsz.
+            </p>
+            <div class="flex gap-3">
+                <button id="accept-cookies"
+                    class="bg-[#8C7A6B] text-white px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium hover:bg-[#726255] transition-all whitespace-nowrap cursor-pointer">
+                    Elfogadom
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobil menü
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Süti kezelő logika
+        window.addEventListener('DOMContentLoaded', () => {
+            if (!localStorage.getItem('cookieConsent')) {
+                document.getElementById('cookie-banner').classList.remove('hidden');
+            }
+        });
+
+        document.getElementById('accept-cookies').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookie-banner').classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>
