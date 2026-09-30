@@ -56,3 +56,229 @@ body {
     font-size: 1rem /* 16px */ !important;
     line-height: 1.5rem !important;
 }
+
+/* =====================================================================
+   THEME SYSTEM: light (default, the original look) + dark (gold & black)
+   The <html> element gets the class "dark" from style/theme.js.
+   Everything below only ADDS to the original styling above.
+   ===================================================================== */
+
+/* ---------- Dark palette (change the gold/black here in one place) ---------- */
+html.dark {
+    --gold: #D4AF37;
+    --gold-soft: #E2BF55;
+    --gold-light: #F0D98A;
+    --gold-deep: #B8902E;
+    --ink: #0C0A07;
+    --ink-footer: #070605;
+    --card: #14110C;
+    --card-2: #1A160F;
+    --ivory: #F3EBD9;
+    --champagne: #E8D9B0;
+    --muted: #BDB29A;
+    --faint: #A39983;
+    --line: rgba(212, 175, 55, 0.20);
+    --line-strong: rgba(212, 175, 55, 0.38);
+    color-scheme: dark;
+}
+
+::selection { background: rgba(140, 122, 107, 0.28); }
+html.dark ::selection { background: rgba(212, 175, 55, 0.35); color: #fff; }
+
+html { scrollbar-color: #CDBFB1 #FBF9F5; }
+html.dark { scrollbar-color: #6E5A25 #0C0A07; }
+.overflow-x-auto { scrollbar-width: thin; scrollbar-color: #D4C5B9 transparent; }
+html.dark .overflow-x-auto { scrollbar-color: #6E5A25 transparent; }
+
+/* Smooth colour change while switching (class added by theme.js for ~0.6s) */
+html.theme-anim *, html.theme-anim *::before, html.theme-anim *::after {
+    transition: background-color .5s ease, color .5s ease, border-color .5s ease,
+                box-shadow .5s ease, fill .5s ease, stroke .5s ease !important;
+}
+
+/* Gentle page entrance */
+@keyframes pageIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+main { animation: pageIn .6s ease both; }
+
+/* ---------- Theme toggle button (sun / moon) ---------- */
+.theme-toggle {
+    position: relative; display: inline-flex; align-items: center; justify-content: center;
+    flex-shrink: 0; width: 2.75rem; height: 2.75rem; padding: 0; overflow: hidden;
+    border-radius: 9999px; border: 1px solid #D4C5B9; background: #F4F0EA; color: #8C7A6B;
+    cursor: pointer; transition: background-color .3s, border-color .3s, box-shadow .3s, transform .3s;
+}
+.theme-toggle svg {
+    position: absolute; width: 1.4rem; height: 1.4rem; pointer-events: none;
+    transition: transform .55s cubic-bezier(.34, 1.56, .64, 1), opacity .3s ease;
+}
+.theme-toggle .icon-moon { opacity: 0; transform: rotate(-90deg) scale(.4); }
+html.dark .theme-toggle .icon-sun { opacity: 0; transform: rotate(90deg) scale(.4); }
+html.dark .theme-toggle .icon-moon { opacity: 1; transform: none; }
+html.dark .theme-toggle { background: var(--card-2); border-color: var(--line-strong); color: var(--gold); }
+.theme-toggle:active { transform: scale(.9); }
+
+/* ---------- Keyboard focus (accessibility) ---------- */
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #8C7A6B; outline-offset: 3px; }
+html.dark a:focus-visible, html.dark button:focus-visible, html.dark summary:focus-visible { outline-color: var(--gold); }
+
+/* ---------- Shared building blocks for hover effects ---------- */
+header nav a { position: relative; }
+header nav a::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; border-radius: 2px;
+    background: #8C7A6B; transform: scaleX(0); transform-origin: center; transition: transform .35s ease;
+}
+/* current page link (the one without a hover class) keeps its underline */
+header nav a:not([class*="hover:"])::after { transform: scaleX(1); }
+
+footer a { position: relative; }
+footer a::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 1px;
+    background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .3s ease;
+}
+
+a.underline { text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+/* Buttons: shine sweep element */
+:is(a, button).rounded-full:is(.bg-\[\#4A4440\], .bg-\[\#8C7A6B\]) { position: relative; overflow: hidden; isolation: isolate; }
+:is(a, button).rounded-full:is(.bg-\[\#4A4440\], .bg-\[\#8C7A6B\])::after {
+    content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, .28) 50%, transparent 65%);
+    transform: translateX(-130%); transition: transform .75s ease;
+}
+
+/* Cards */
+.rounded-2xl.border, .rounded-3xl.border, .contact-card-hover {
+    transition: transform .35s cubic-bezier(.4, 0, .2, 1), box-shadow .35s ease, border-color .35s ease, background-color .3s ease;
+}
+.overflow-hidden img { transition: transform .8s cubic-bezier(.2, .6, .2, 1); }
+.icon-box { transition: background-color .3s, color .3s, transform .4s cubic-bezier(.34, 1.56, .64, 1) !important; }
+
+/* Form fields */
+input, select, textarea { transition: border-color .3s ease, box-shadow .3s ease, background-color .3s ease; }
+input:focus, select:focus, textarea:focus { box-shadow: 0 0 0 4px rgba(140, 122, 107, .18); }
+
+/* Mobile menu links */
+#mobile-menu a { transition: transform .25s ease, color .25s ease; }
+
+/* =====================================================================
+   DARK MODE: colour mapping (gold & black)
+   ===================================================================== */
+
+/* Backgrounds */
+html.dark .bg-\[\#FBF9F5\] { background-color: var(--ink); }
+html.dark .bg-\[\#FBF9F5\]\/90 { background-color: rgba(12, 10, 7, .88); }
+html.dark .bg-white { background-color: var(--card); }
+html.dark .bg-\[\#F4F0EA\] { background-color: var(--card-2); }
+html.dark .bg-\[\#2C2A29\] { background-color: var(--ink-footer); }
+
+/* Text */
+html.dark .text-\[\#2C2A29\] { color: var(--ivory); }
+html.dark .text-\[\#4A4440\] { color: var(--champagne); }
+html.dark .text-\[\#6B5E54\] { color: var(--muted); }
+html.dark .text-\[\#8C7A6B\] { color: var(--gold); }
+html.dark .text-\[\#A89F95\] { color: var(--faint); }
+
+/* Borders */
+html.dark .border-\[\#EBE5DC\] { border-color: var(--line); }
+html.dark .border-\[\#D4C5B9\] { border-color: var(--line-strong); }
+html.dark .border-\[\#F4F0EA\] { border-color: rgba(212, 175, 55, .12); }
+html.dark .border-\[\#4A4440\] { border-color: var(--line-strong); }
+html.dark .border-\[\#8C7A6B\] { border-color: var(--gold); }
+
+/* Header, footer, cookie banner */
+html.dark header { box-shadow: 0 1px 0 rgba(212, 175, 55, .10), 0 10px 30px -20px rgba(0, 0, 0, .8); }
+html.dark footer { border-top: 1px solid var(--line); }
+html.dark footer a { color: var(--faint); }
+html.dark #cookie-banner { box-shadow: 0 -12px 40px -12px rgba(0, 0, 0, .9); }
+
+/* Gold buttons (primary actions + cookie accept) */
+html.dark :is(a, button).bg-\[\#4A4440\],
+html.dark :is(a, button).bg-\[\#8C7A6B\] {
+    background-color: var(--gold-deep);
+    background-image: linear-gradient(135deg, #B8902E 0%, #E8C65A 50%, #B8902E 100%);
+    background-size: 200% 100%; background-position: 0 0;
+    color: #15110A; font-weight: 600;
+    box-shadow: 0 8px 24px -10px rgba(212, 175, 55, .5);
+}
+
+/* Secondary (outlined) buttons and chips */
+html.dark a.bg-\[\#F4F0EA\] { background-color: var(--card-2); color: var(--champagne); border-color: var(--line-strong); }
+
+/* Forms */
+html.dark input, html.dark select, html.dark textarea { color: var(--ivory); }
+html.dark input::placeholder, html.dark textarea::placeholder { color: var(--faint); }
+html.dark select option { background: var(--card); color: var(--ivory); }
+html.dark input[type="checkbox"] { accent-color: var(--gold); }
+html.dark input:focus, html.dark select:focus, html.dark textarea:focus {
+    border-color: var(--gold-soft); box-shadow: 0 0 0 4px rgba(212, 175, 55, .16);
+}
+
+/* Images and header underline */
+html.dark img { filter: brightness(.93) contrast(1.02); }
+html.dark header nav a::after { background: linear-gradient(90deg, var(--gold-deep), var(--gold-light), var(--gold-deep)); }
+
+/* Contact cards (their base hover lives in the pages, dark variant here) */
+html.dark .contact-card-hover:hover { border-color: var(--gold); box-shadow: 0 18px 40px -18px rgba(212, 175, 55, .45); }
+html.dark .contact-card-hover:hover .icon-box { background-color: var(--gold); color: #15110A; }
+
+/* =====================================================================
+   HOVER EFFECTS (only on devices that really hover, so phones don't get stuck states)
+   ===================================================================== */
+@media (hover: hover) and (pointer: fine) {
+
+    /* Menu */
+    header nav a:hover::after { transform: scaleX(1); }
+    footer a:hover::after { transform: scaleX(1); }
+    #mobile-menu a:hover { transform: translateX(6px); }
+    a.underline:hover { text-decoration-thickness: 2px; }
+
+    /* Buttons: lift + shine */
+    :is(a, button).rounded-full:is(.bg-\[\#4A4440\], .bg-\[\#8C7A6B\]):hover {
+        transform: translateY(-2px); box-shadow: 0 14px 28px -12px rgba(44, 42, 41, .55);
+    }
+    :is(a, button).rounded-full:is(.bg-\[\#4A4440\], .bg-\[\#8C7A6B\]):hover::after { transform: translateX(130%); }
+    a.rounded-full.bg-\[\#F4F0EA\]:hover { transform: translateY(-2px); box-shadow: 0 10px 22px -12px rgba(74, 68, 64, .35); border-color: #8C7A6B; }
+
+    /* Cards */
+    .rounded-2xl.border:hover, .snap-center:hover {
+        transform: translateY(-5px); border-color: #D4C5B9; box-shadow: 0 18px 34px -18px rgba(74, 68, 64, .28);
+    }
+    .rounded-3xl.border:hover { border-color: #D4C5B9; box-shadow: 0 16px 40px -22px rgba(74, 68, 64, .25); }
+    .overflow-hidden:hover img { transform: scale(1.04); }
+    .contact-card-hover:hover .icon-box { transform: scale(1.1) rotate(-6deg); }
+
+    /* Theme toggle */
+    .theme-toggle:hover { background: #EBE5DC; border-color: #8C7A6B; transform: translateY(-1px); box-shadow: 0 8px 18px -10px rgba(74, 68, 64, .45); }
+    .theme-toggle:hover .icon-sun { transform: rotate(35deg) scale(1.1); }
+
+    /* ---- Dark versions (gold glow instead of soft brown shadow) ---- */
+    html.dark .hover\:text-\[\#8C7A6B\]:hover { color: var(--gold-light); }
+    html.dark .hover\:text-\[\#2C2A29\]:hover { color: #FFF6DC; }
+    html.dark footer a:hover { color: var(--gold-light); }
+
+    html.dark :is(a, button).rounded-full:is(.bg-\[\#4A4440\], .bg-\[\#8C7A6B\]):hover {
+        background-position: 100% 0; box-shadow: 0 16px 36px -10px rgba(226, 191, 85, .6);
+    }
+    html.dark a.bg-\[\#F4F0EA\]:hover {
+        background-color: rgba(212, 175, 55, .14); border-color: var(--gold); color: var(--gold-light);
+        box-shadow: 0 10px 26px -12px rgba(212, 175, 55, .55);
+    }
+    html.dark .rounded-2xl.border:hover, html.dark .snap-center:hover {
+        border-color: rgba(212, 175, 55, .6); box-shadow: 0 0 0 1px rgba(212, 175, 55, .15), 0 20px 42px -18px rgba(212, 175, 55, .35);
+    }
+    html.dark .rounded-3xl.border:hover { border-color: rgba(212, 175, 55, .45); box-shadow: 0 18px 44px -24px rgba(212, 175, 55, .3); }
+    html.dark .theme-toggle:hover { background: rgba(212, 175, 55, .14); border-color: var(--gold); box-shadow: 0 0 0 4px rgba(212, 175, 55, .12), 0 10px 24px -10px rgba(212, 175, 55, .6); }
+    html.dark .theme-toggle:hover .icon-moon { transform: rotate(-18deg) scale(1.12); }
+}
+
+/* =====================================================================
+   PRESSED (while clicking)
+   ===================================================================== */
+:is(a, button).rounded-full:active { transform: translateY(0) scale(.97) !important; transition-duration: .1s; }
+.contact-card-hover:active, .rounded-2xl.border:active { transform: scale(.985); }
+header nav a:active, footer a:active { opacity: .7; }
+
+/* Respect people who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
