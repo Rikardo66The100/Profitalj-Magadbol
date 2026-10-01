@@ -4,7 +4,7 @@ hírlevél feliratkozás ????
 kapcsolat - instagram/facebook/tel/mailto/forms ✅
 rólam - szöveg ✅
 kezdőlap - kép és szöveg ✅
-
+HA mindem megvan suliban meg kell csinálni a Google Analytics ID-ját, de ahhoz már létező weboldal kell.
 
 Adattárolás és későbbiekben email küldése vagy calendly-> rackhost webtárhely
 rackhost:
