@@ -33,7 +33,7 @@
                 b.setAttribute('aria-label', label);
                 b.setAttribute('title', label);
             });
-            meta.content = dark ? '#0C0A07' : '#FBF9F5';
+            meta.content = dark ? '#0C0A07' : '#F1E7D4';
         }
 
         buttons.forEach(function (b) {
@@ -43,6 +43,7 @@
                 apply(next);
                 try { localStorage.setItem(KEY, next); } catch (e) { }
                 sync();
+                document.dispatchEvent(new CustomEvent('themechange', { detail: { mode: next } }));
                 clearTimeout(timer);
                 timer = setTimeout(function () { root.classList.remove('theme-anim'); }, 650);
             });
@@ -50,7 +51,7 @@
 
         /* keep other open tabs in sync */
         window.addEventListener('storage', function (e) {
-            if (e.key === KEY) { apply(e.newValue === 'dark' ? 'dark' : 'light'); sync(); }
+            if (e.key === KEY) { var m = e.newValue === 'dark' ? 'dark' : 'light'; apply(m); sync(); document.dispatchEvent(new CustomEvent('themechange', { detail: { mode: m } })); }
         });
 
         sync();

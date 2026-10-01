@@ -65,18 +65,18 @@ body {
 
 /* ---------- Dark palette (change the gold/black here in one place) ---------- */
 html.dark {
-    --gold: #D4AF37;
+    --gold: #E3BE4A;
     --gold-soft: #E2BF55;
-    --gold-light: #F0D98A;
+    --gold-light: #F7E29B;
     --gold-deep: #B8902E;
     --ink: #0C0A07;
     --ink-footer: #070605;
     --card: #14110C;
     --card-2: #1A160F;
-    --ivory: #F3EBD9;
-    --champagne: #E8D9B0;
-    --muted: #BDB29A;
-    --faint: #A39983;
+    --ivory: #FFF9EA;
+    --champagne: #F7ECCF;
+    --muted: #E8DDC3;
+    --faint: #D6CBAF;
     --line: rgba(212, 175, 55, 0.20);
     --line-strong: rgba(212, 175, 55, 0.38);
     color-scheme: dark;
@@ -85,9 +85,9 @@ html.dark {
 ::selection { background: rgba(140, 122, 107, 0.28); }
 html.dark ::selection { background: rgba(212, 175, 55, 0.35); color: #fff; }
 
-html { scrollbar-color: #CDBFB1 #FBF9F5; }
+html { scrollbar-color: #B9A68A #F1E7D4; }
 html.dark { scrollbar-color: #6E5A25 #0C0A07; }
-.overflow-x-auto { scrollbar-width: thin; scrollbar-color: #D4C5B9 transparent; }
+.overflow-x-auto { scrollbar-width: thin; scrollbar-color: #B9A68A transparent; }
 html.dark .overflow-x-auto { scrollbar-color: #6E5A25 transparent; }
 
 /* Smooth colour change while switching (class added by theme.js for ~0.6s) */
@@ -104,7 +104,7 @@ main { animation: pageIn .6s ease both; }
 .theme-toggle {
     position: relative; display: inline-flex; align-items: center; justify-content: center;
     flex-shrink: 0; width: 2.75rem; height: 2.75rem; padding: 0; overflow: hidden;
-    border-radius: 9999px; border: 1px solid #D4C5B9; background: #F4F0EA; color: #8C7A6B;
+    border-radius: 9999px; border: 1px solid #C4B091; background: #E9DDC5; color: #5A4636;
     cursor: pointer; transition: background-color .3s, border-color .3s, box-shadow .3s, transform .3s;
 }
 .theme-toggle svg {
@@ -118,14 +118,14 @@ html.dark .theme-toggle { background: var(--card-2); border-color: var(--line-st
 .theme-toggle:active { transform: scale(.9); }
 
 /* ---------- Keyboard focus (accessibility) ---------- */
-a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #8C7A6B; outline-offset: 3px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #6B5642; outline-offset: 3px; }
 html.dark a:focus-visible, html.dark button:focus-visible, html.dark summary:focus-visible { outline-color: var(--gold); }
 
 /* ---------- Shared building blocks for hover effects ---------- */
 header nav a { position: relative; }
 header nav a::after {
     content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; border-radius: 2px;
-    background: #8C7A6B; transform: scaleX(0); transform-origin: center; transition: transform .35s ease;
+    background: #6B5642; transform: scaleX(0); transform-origin: center; transition: transform .35s ease;
 }
 /* current page link (the one without a hover class) keeps its underline */
 header nav a:not([class*="hover:"])::after { transform: scaleX(1); }
@@ -241,14 +241,14 @@ html.dark .contact-card-hover:hover .icon-box { background-color: var(--gold); c
 
     /* Cards */
     .rounded-2xl.border:hover, .snap-center:hover {
-        transform: translateY(-5px); border-color: #D4C5B9; box-shadow: 0 18px 34px -18px rgba(74, 68, 64, .28);
+        transform: translateY(-5px); border-color: #A58E69; box-shadow: 0 18px 34px -18px rgba(74, 68, 64, .28);
     }
-    .rounded-3xl.border:hover { border-color: #D4C5B9; box-shadow: 0 16px 40px -22px rgba(74, 68, 64, .25); }
+    .rounded-3xl.border:hover { border-color: #A58E69; box-shadow: 0 16px 40px -22px rgba(74, 68, 64, .25); }
     .overflow-hidden:hover img { transform: scale(1.04); }
     .contact-card-hover:hover .icon-box { transform: scale(1.1) rotate(-6deg); }
 
     /* Theme toggle */
-    .theme-toggle:hover { background: #EBE5DC; border-color: #8C7A6B; transform: translateY(-1px); box-shadow: 0 8px 18px -10px rgba(74, 68, 64, .45); }
+    .theme-toggle:hover { background: #DDCFB3; border-color: #6B5642; transform: translateY(-1px); box-shadow: 0 8px 18px -10px rgba(74, 68, 64, .45); }
     .theme-toggle:hover .icon-sun { transform: rotate(35deg) scale(1.1); }
 
     /* ---- Dark versions (gold glow instead of soft brown shadow) ---- */
@@ -271,6 +271,9 @@ html.dark .contact-card-hover:hover .icon-box { background-color: var(--gold); c
     html.dark .theme-toggle:hover .icon-moon { transform: rotate(-18deg) scale(1.12); }
 }
 
+/* =====================================================================
+   PRESSED (while clicking)
+   ===================================================================== */
 :is(a, button).rounded-full:active { transform: translateY(0) scale(.97) !important; transition-duration: .1s; }
 .contact-card-hover:active, .rounded-2xl.border:active { transform: scale(.985); }
 header nav a:active, footer a:active { opacity: .7; }
@@ -281,9 +284,119 @@ header nav a:active, footer a:active { opacity: .7; }
 }
 
 
+/* Fix: feedback cards were clipped at the top when lifting on hover.
+   The scroll container (overflow-x-auto) also crops vertically, so it gets
+   extra room above/below; the negative margins keep the page layout unchanged. */
 .snap-x {
     padding-top: 1.25rem;
     margin-top: -1.25rem;
     padding-bottom: 2rem;
     margin-bottom: -0.5rem;
 }
+
+
+/* =====================================================================
+   READABILITY + BEIGE LIGHT THEME UPDATE
+   - Light theme: beige page background, darker and bolder text
+   - Dark theme: brighter and bolder text (palette values are at the top)
+   - Heavier font weights in BOTH themes
+   ===================================================================== */
+
+html { background: #F1E7D4; }
+html.dark { background: #0C0A07; }
+
+body { font-weight: 500; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.font-light { font-weight: 400; }
+.font-normal { font-weight: 500; }
+.font-medium { font-weight: 600; }
+.font-semibold { font-weight: 700; }
+.font-bold { font-weight: 800; }
+
+/* ---------- Light theme: beige palette ---------- */
+html:not(.dark) .bg-\[\#FBF9F5\] { background-color: #F1E7D4; }
+html:not(.dark) .bg-\[\#FBF9F5\]\/90 { background-color: rgba(241, 231, 212, .93); }
+html:not(.dark) .bg-white { background-color: #FFFCF5; }
+html:not(.dark) .bg-\[\#F4F0EA\] { background-color: #E9DDC5; }
+html:not(.dark) .bg-\[\#8C7A6B\] { background-color: #6B5642; }
+
+html:not(.dark) .text-\[\#2C2A29\] { color: #14110D; }
+html:not(.dark) .text-\[\#4A4440\] { color: #231E19; }
+html:not(.dark) .text-\[\#6B5E54\] { color: #3A3029; }
+html:not(.dark) .text-\[\#8C7A6B\] { color: #6B5642; }
+html:not(.dark) .text-\[\#A89F95\] { color: #54483D; }
+
+html:not(.dark) .border-\[\#EBE5DC\] { border-color: #D6C6AA; }
+html:not(.dark) .border-\[\#D4C5B9\] { border-color: #C4B091; }
+html:not(.dark) .border-\[\#F4F0EA\] { border-color: #E2D5BD; }
+
+html:not(.dark) input, html:not(.dark) select, html:not(.dark) textarea { color: #14110D; }
+html:not(.dark) input::placeholder, html:not(.dark) textarea::placeholder { color: #6F6253; }
+
+/* The footer and cookie banner stay dark in the light theme, so their text stays light */
+html:not(.dark) footer .text-\[\#A89F95\], html:not(.dark) #cookie-banner .text-\[\#A89F95\] { color: #E2D8C6; }
+html:not(.dark) footer a { color: #E2D8C6; }
+
+/* Hover colours that the overrides above would otherwise cancel (light theme only) */
+html:not(.dark) .hover\:text-\[\#8C7A6B\]:hover { color: #3F2F20; }
+html:not(.dark) .hover\:text-\[\#2C2A29\]:hover { color: #000; }
+html:not(.dark) .hover\:text-white:hover { color: #fff; }
+html:not(.dark) .hover\:bg-\[\#4A4440\]:hover { background-color: #4A4440; }
+html:not(.dark) .hover\:bg-\[\#EBE5DC\]:hover { background-color: #DDCFB3; }
+html:not(.dark) .hover\:bg-\[\#726255\]:hover { background-color: #54422F; }
+html:not(.dark) footer a:hover, html:not(.dark) footer .hover\:text-\[\#8C7A6B\]:hover { color: #F0E3C8; }
+html:not(.dark) #cookie-banner .hover\:text-\[\#8C7A6B\]:hover { color: #F0E3C8; }
+
+/* ---------- Calendly booking box ---------- */
+#calendly-embed { position: relative; transition: opacity .3s ease; }
+#calendly-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+
+/* =====================================================================
+   TEXT STRENGTH CONTROL  <<< change the text look in THIS block >>>
+   - Weights: 400 = normal, 500 = medium, 600 = semi-bold, 700 = bold
+   - Light theme text colours: closer to #000000 = blacker
+   - Dark theme text colours: closer to #FFFFFF = whiter
+   ===================================================================== */
+:root {
+    /* weights (both themes) */
+    --w-light: 500;     /* was thin text */
+    --w-normal: 600;    /* normal paragraphs */
+    --w-medium: 700;    /* buttons, labels */
+    --w-semibold: 800;
+    --w-bold: 800;
+
+    /* LIGHT theme text colours */
+    --l-text-1: #050403;   /* headings, main text */
+    --l-text-2: #100C09;   /* secondary text */
+    --l-text-3: #1C1510;   /* paragraphs, descriptions */
+    --l-accent: #4E3A27;   /* brown labels and links */
+    --l-small: #2E241B;    /* small notes */
+}
+html.dark {
+    /* DARK theme text colours */
+    --ivory: #FFFFFF;      /* headings, main text */
+    --champagne: #FFFCF2;  /* secondary text */
+    --muted: #F8F0DD;      /* paragraphs, descriptions */
+    --faint: #EBE2CB;      /* small notes */
+    --gold: #F2CE5C;       /* gold labels and links */
+    --gold-light: #FFE9A8; /* gold on hover */
+}
+
+body { font-weight: var(--w-normal); text-rendering: optimizeLegibility; }
+.font-light { font-weight: var(--w-light); }
+.font-normal { font-weight: var(--w-normal); }
+.font-medium { font-weight: var(--w-medium); }
+.font-semibold { font-weight: var(--w-semibold); }
+.font-bold { font-weight: var(--w-bold); }
+
+html:not(.dark) .text-\[\#2C2A29\] { color: var(--l-text-1); }
+html:not(.dark) .text-\[\#4A4440\] { color: var(--l-text-2); }
+html:not(.dark) .text-\[\#6B5E54\] { color: var(--l-text-3); }
+html:not(.dark) .text-\[\#8C7A6B\] { color: var(--l-accent); }
+html:not(.dark) .text-\[\#A89F95\] { color: var(--l-small); }
+html:not(.dark) footer .text-\[\#A89F95\], html:not(.dark) #cookie-banner .text-\[\#A89F95\] { color: #F1E9DA; }
+html:not(.dark) footer a { color: #F1E9DA; }
+html:not(.dark) input, html:not(.dark) select, html:not(.dark) textarea { color: var(--l-text-1); }
+html:not(.dark) .hover\:text-\[\#8C7A6B\]:hover { color: #2A1D12; }
+html:not(.dark) footer a:hover, html:not(.dark) footer .hover\:text-\[\#8C7A6B\]:hover { color: #FFF3D6; }
+html:not(.dark) #cookie-banner .hover\:text-\[\#8C7A6B\]:hover { color: #FFF3D6; }
