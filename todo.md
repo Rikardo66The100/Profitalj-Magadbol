@@ -15,7 +15,7 @@ Design:
 sötét és világos oldal kialakítása ✅
 hover, button effektek barmilyen UI/UX design amivel feldobható az oldal megjelenése ✅
 Rólam 2 sötét/világos mód gomb hozzáadása 
-Telefonos nézetben sötét/világos gomb megfelelő elhelyezése 
+Telefonos nézetben sötét/világos gomb megfelelő elhelyezése pl mehetne lentre mint egy ilyen lebegő kis gomb iPhone SE-n tesztelj légyszi
 
 Adatvédelmi tájékoztató ✅
 ÁSZF ✅
