@@ -14,8 +14,8 @@ https://www.rackhost.hu/domain ✅
 Design:
 sötét és világos oldal kialakítása ✅
 hover, button effektek barmilyen UI/UX design amivel feldobható az oldal megjelenése ✅
-Rólam 2 sötét/világos mód gomb hozzáadása 
 Telefonos nézetben sötét/világos gomb megfelelő elhelyezése pl mehetne lentre mint egy ilyen lebegő kis gomb iPhone SE-n tesztelj légyszi
+Kapcsolat oldal Calendly oldalra való görgetése fix 
 
 Adatvédelmi tájékoztató ✅
 ÁSZF ✅
@@ -27,9 +27,8 @@ Lépések:
 Megegyezés az emailben. kapcsolat vagy info@profitaljmagadbol.hu ✅
 Calendly regisztrálása, Google Analytics regisztrálása saját email címmel. ✅
 Weboldalon lévő elérhetőségi adatok frissítése, előre átírni a majd foglalt email címre. ✅
-Képtömörítés 300kb alá. https://squoosh.app/editor
+Képtömörítés 300kb alá. https://squoosh.app/editor ✅
 
-A rólam oldalt úgy módosítod ahogy szeretnéd nekem egyébként jobban tetszik az az eloszlás, hogy nincs benne kép ha el tudod úgy helyezni a szöveget tökéletes lenne
 Díjak aktuális adatokra cserélése. ✅
 Rackhost beállítása, domain hozzárendelése, kapcsolati email létrehozása. 
 (Favicon találása)
