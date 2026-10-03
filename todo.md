@@ -30,7 +30,7 @@ Weboldalon lévő elérhetőségi adatok frissítése, előre átírni a majd fo
 Képtömörítés 300kb alá. https://squoosh.app/editor
 
 A rólam oldalt úgy módosítod ahogy szeretnéd nekem egyébként jobban tetszik az az eloszlás, hogy nincs benne kép ha el tudod úgy helyezni a szöveget tökéletes lenne
-Díjak aktuális adatokra cserélése - Várom a Tanárnőtől.
+Díjak aktuális adatokra cserélése. ✅
 Rackhost beállítása, domain hozzárendelése, kapcsolati email létrehozása. 
 (Favicon találása)
-Impresszum, GDPR, ÁSZF frissítése, hogy jogilag minden biztonságos legyen.
+Impresszum, GDPR, ÁSZF frissítése, hogy jogilag minden biztonságos legyen. ✅
