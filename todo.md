@@ -16,7 +16,6 @@ sötét és világos oldal kialakítása ✅
 hover, button effektek barmilyen UI/UX design amivel feldobható az oldal megjelenése ✅
 Telefonos nézetben sötét/világos gomb megfelelő elhelyezése pl mehetne lentre mint egy ilyen lebegő kis gomb iPhone SE-n tesztelj légyszi
 Kapcsolat oldal Calendly oldalra való görgetése fix 
-Arany szín kiprobálása világos módban.
 
 Adatvédelmi tájékoztató ✅
 ÁSZF ✅
@@ -32,5 +31,5 @@ Képtömörítés 300kb alá. https://squoosh.app/editor ✅
 
 Díjak aktuális adatokra cserélése. ✅
 Rackhost beállítása, domain hozzárendelése, kapcsolati email létrehozása. 
-(Favicon találása)
+(Favicon találása) ✅
 Impresszum, GDPR, ÁSZF frissítése, hogy jogilag minden biztonságos legyen. ✅
