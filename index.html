@@ -85,17 +85,13 @@
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                         </svg></button>
-                    <button id="menu-btn" class="text-[#4A4440]" aria-label="Menü megnyitása">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                    <button id="menu-btn" class="text-[#4A4440]" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="mobile-menu"><svg class="w-7 h-7 burger" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><line class="b1" x1="4" y1="6" x2="20" y2="6"/><line class="b2" x1="4" y1="12" x2="20" y2="12"/><line class="b3" x1="4" y1="18" x2="20" y2="18"/></svg>
                     </button>
                 </div>
             </div>
         </div>
         <div id="mobile-menu"
-            class="hidden lg:hidden bg-[#FBF9F5] border-b border-[#EBE5DC] px-6 pt-3 pb-6 space-y-4 text-base">
+            class="lg:hidden bg-[#FBF9F5] border-b border-[#EBE5DC] px-6 pt-3 pb-6 space-y-4 text-base">
             <a href="index.html" class="block text-[#8C7A6B] font-semibold">Kezdőlap</a>
             <a href="rolam.html" class="block hover:text-[#8C7A6B]">Rólam</a>
             <a href="dijak-es-tudnivalok.html" class="block hover:text-[#8C7A6B]">Díjak és tudnivalók</a>
@@ -523,7 +519,11 @@
     <script>
         // Mobil menü
         document.getElementById('menu-btn').addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
+            var mm = document.getElementById('mobile-menu'), mb = document.getElementById('menu-btn');
+            var open = mm.classList.toggle('open');
+            mb.classList.toggle('is-open', open);
+            mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+            mb.setAttribute('aria-label', open ? 'Menü bezárása' : 'Menü megnyitása');
         });
 
         // Süti kezelő logika

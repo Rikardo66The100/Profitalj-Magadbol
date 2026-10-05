@@ -963,3 +963,62 @@ header .flex-shrink-0 > a { white-space: nowrap; display: inline-block; }
     h1 { font-size: clamp(1.7rem, 8vw, 2.25rem) !important; }
     h2 { font-size: clamp(1.4rem, 6.5vw, 1.75rem) !important; }
 }
+
+
+/* =====================================================================
+   CALENDLY: always stays inside its box
+   ===================================================================== */
+#idopontfoglalas { overflow: hidden; max-width: 100%; }
+#calendly-embed { width: 100% !important; max-width: 100% !important; min-width: 0 !important; margin-left: 0 !important; margin-right: 0 !important; overflow: hidden; }
+#calendly-embed .calendly-inline-widget,
+#calendly-embed iframe { width: 100% !important; max-width: 100% !important; min-width: 0 !important; }
+@media (max-width: 640px) {
+    #calendly-embed { margin-left: 0 !important; margin-right: 0 !important; width: 100% !important; }
+}
+
+/* =====================================================================
+   MOBILE MENU: smooth slide-down, staggered links, burger -> X
+   ===================================================================== */
+@media (max-width: 1023.98px) {
+    #mobile-menu {
+        display: block;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transform-origin: top;
+        transition: max-height .42s cubic-bezier(.22, 1, .36, 1), opacity .3s ease,
+            transform .42s cubic-bezier(.22, 1, .36, 1), padding .42s cubic-bezier(.22, 1, .36, 1),
+            visibility 0s linear .42s;
+    }
+    #mobile-menu:not(.open) { padding-top: 0 !important; padding-bottom: 0 !important; border-bottom-width: 0 !important; }
+    #mobile-menu.open {
+        max-height: calc(100vh - 5rem);
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        overflow-y: auto;
+        transition-delay: 0s;
+    }
+    #mobile-menu > a {
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity .35s ease, transform .4s cubic-bezier(.22, 1, .36, 1), color .25s ease;
+    }
+    #mobile-menu.open > a { opacity: 1; transform: none; }
+    #mobile-menu.open > a:nth-child(1) { transition-delay: .06s; }
+    #mobile-menu.open > a:nth-child(2) { transition-delay: .11s; }
+    #mobile-menu.open > a:nth-child(3) { transition-delay: .16s; }
+    #mobile-menu.open > a:nth-child(4) { transition-delay: .21s; }
+    #mobile-menu.open > a:nth-child(5) { transition-delay: .26s; }
+    #mobile-menu > a:active { transform: scale(.97) !important; opacity: .8; transition-delay: 0s; }
+}
+#menu-btn { transition: transform .35s cubic-bezier(.34, 1.56, .64, 1); -webkit-tap-highlight-color: transparent; }
+#menu-btn:active { transform: scale(.88); }
+#menu-btn.is-open { transform: rotate(90deg); }
+#menu-btn.is-open:active { transform: rotate(90deg) scale(.88); }
+#menu-btn .burger line { transform-box: fill-box; transform-origin: center; transition: transform .35s cubic-bezier(.22, 1, .36, 1), opacity .2s ease; }
+#menu-btn.is-open .b1 { transform: translateY(6px) rotate(45deg); }
+#menu-btn.is-open .b2 { opacity: 0; transform: scaleX(.2); }
+#menu-btn.is-open .b3 { transform: translateY(-6px) rotate(-45deg); }
