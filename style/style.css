@@ -912,3 +912,54 @@ html:not(.dark) footer .hover\:text-\[\#8C7A6B\]:hover {
 html:not(.dark) #cookie-banner .hover\:text-\[\#8C7A6B\]:hover {
     color: #FFF3D6;
 }
+
+/* =====================================================================
+   MOBILE RESPONSIVENESS FIXES
+   ===================================================================== */
+html { overflow-x: clip; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { overflow-x: clip; max-width: 100%; }
+.grid > *, .flex > * { min-width: 0; }
+h1, h2, h3, h4, p, li, a, span, label { overflow-wrap: break-word; }
+iframe, video, svg, table { max-width: 100%; }
+
+/* Navbar: logo + controls stay on one line, vertically centred */
+header .flex.items-center { gap: .5rem; }
+header > div > div { gap: .75rem; }
+header a, header button { line-height: 1.2; }
+header nav a { white-space: nowrap; display: inline-flex; align-items: center; }
+header .theme-toggle { flex-shrink: 0; }
+header > div > div > :first-child { min-width: 0; }
+header a[href="index.html"].font-serif,
+header .flex-shrink-0 > a { white-space: nowrap; display: inline-block; }
+#menu-btn { display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; padding: 0; flex-shrink: 0; }
+#mobile-menu { max-height: calc(100vh - 5rem); overflow-y: auto; }
+@media (max-width: 480px) {
+    header a.font-serif, header .flex-shrink-0 > a { font-size: 1.05rem !important; letter-spacing: .03em !important; }
+    header .theme-toggle, #menu-btn { width: 2.5rem; height: 2.5rem; }
+}
+@media (max-width: 360px) {
+    header a.font-serif, header .flex-shrink-0 > a { font-size: .92rem !important; letter-spacing: .01em !important; }
+    header > div { padding-left: .75rem; padding-right: .75rem; }
+}
+/* between 1024 and 1180px keep the desktop nav compact so nothing is cut */
+@media (min-width: 1024px) and (max-width: 1180px) {
+    header nav { column-gap: 1.25rem; }
+    header nav.space-x-8 > * + * { margin-left: 0 !important; }
+}
+
+/* Calendly: no forced min-width, minimal white gap around the embed */
+#calendly-embed, #calendly-embed .calendly-inline-widget { min-width: 0 !important; width: 100%; max-width: 100%; }
+@media (max-width: 640px) {
+    #idopontfoglalas { padding-left: 0 !important; padding-right: 0 !important; border-radius: 1.25rem; }
+    #idopontfoglalas > .text-center { padding-left: 1rem; padding-right: 1rem; }
+    #calendly-embed { margin-left: -.25rem; margin-right: -.25rem; width: calc(100% + .5rem); }
+}
+
+/* Cookie banner + buttons on small screens */
+#cookie-banner { max-width: 100vw; }
+@media (max-width: 640px) {
+    #cookie-banner { padding-left: 1rem !important; padding-right: 1rem !important; }
+    .whitespace-nowrap { white-space: normal !important; }
+    h1 { font-size: clamp(1.7rem, 8vw, 2.25rem) !important; }
+    h2 { font-size: clamp(1.4rem, 6.5vw, 1.75rem) !important; }
+}
