@@ -189,7 +189,7 @@
                 <div class="bg-white p-6 rounded-2xl border border-[#EBE5DC] space-y-2 text-[#4A4440] font-light">
                     <p>Maradtál a rossz házasságodban.</p>
                     <p>Más kapta meg helyetted az állást.</p>
-                    <p>Mégsem íratkoztál be arra a tanfolyamra.</p>
+                    <p>Mégsem iratkoztál be arra a tanfolyamra.</p>
                     <p>Nem kértél időpontot a szakrendelőben.</p>
                     <p>Nem álltál ki magadért a munkahelyeden.</p>
                 </div>
@@ -301,7 +301,7 @@
                 <div class="bg-white p-8 rounded-3xl border border-[#EBE5DC] shadow-sm space-y-3">
                     <h3 class="text-xl font-serif text-[#2C2A29]">Mi lenne, ha...</h3>
                     <p class="text-base text-[#6B5E54] font-light">...meg tudnád különböztetni azt, amit valóban nem
-                        akarsz attól, amit csak azért nem mersz megtenni, mert félsz a következményektől?</p>
+                        akarsz attól, amit csak azért nad mersz megtenni, mert félsz a következményektől?</p>
                 </div>
             </div>
 
@@ -412,7 +412,7 @@
                     Lehet, hogy ez egy ímél.</div>
                 <div
                     class="bg-white p-5 rounded-2xl border border-[#EBE5DC] text-center text-[#6B5E54] sm:col-span-2 md:col-span-2">
-                    És lehet, hogy végre kimondod: „Ezt már nem akarom tovább így.”</div>
+                    Lehet, hogy végre kimondod: „Ezt már nem akarom tovább így.”</div>
             </div>
 
             <p class="text-xl font-serif text-[#2C2A29] pt-4">És lehet, hogy éppen itt kezdődik valami új.</p>
@@ -442,45 +442,94 @@
                 <p class="text-sm text-[#8C7A6B]">Tapasztalatok a közös munkáról</p>
             </div>
 
-            <div class="flex overflow-x-auto md:grid md:grid-cols-4 gap-6 pb-6 snap-x">
+            <!-- Visszajelzések konténer nyilakkal és lapozó gombokkal -->
+            <div class="relative max-w-6xl mx-auto px-4 sm:px-12">
+                <!-- Bal nyíl gomb -->
+                <button id="scroll-left" aria-label="Előző visszajelzés"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-[#EBE5DC] shadow-md flex items-center justify-center text-[#4A4440] hover:bg-[#F4F0EA] transition-all cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
 
-                <div
-                    class="min-w-[260px] max-w-[300px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
-                    <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
-                        „Ilona egy nagyon kedves, higgadt személyiség. Pozitív kisugárzásával és megfelelő tudással
-                        kiváló szakember. Tudatosan alkalmazta a coaching eszköztárát. Teljes mértékben a helyzet ura
-                        volt.”
-                    </p>
-                    <p class="font-medium text-xs text-[#2C2A29]">— Ildikó, 46 éves vállalkozó</p>
+                <!-- Jobb nyíl gomb -->
+                <button id="scroll-right" aria-label="Következő visszajelzés"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-[#EBE5DC] shadow-md flex items-center justify-center text-[#4A4440] hover:bg-[#F4F0EA] transition-all cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+
+                <!-- Görgethető kártyák listája egy sorban, nagyobb képernyőn is lapozható -->
+                <div id="testimonials-container"
+                    class="flex overflow-x-auto gap-6 pb-6 snap-x scroll-smooth no-scrollbar">
+
+                    <div
+                        class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
+                        <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
+                            „Ilona egy nagyon kedves, higgadt személyiség. Pozitív kisugárzásával és megfelelő tudással
+                            kiváló szakember. Tudatosan alkalmazta a coaching eszköztárát. Teljes mértékben a helyzet
+                            ura
+                            volt.”
+                        </p>
+                        <p class="font-medium text-xs text-[#2C2A29]">— Ildikó, 46 éves vállalkozó</p>
+                    </div>
+
+                    <div
+                        class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
+                        <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
+                            „Nagyon profi. Érthetően fogalmaz, abszolút nyugodt, megnyerő személyiség. Felkészült, jó
+                            szakember”
+                        </p>
+                        <p class="font-medium text-xs text-[#2C2A29]">— Eszter, 36 éves, két kisgyerekes édesanya </p>
+                    </div>
+
+                    <div
+                        class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
+                        <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
+                            „Professzionális a kommunikációja. Jól érthető kérdésekkel vezet. Támogató és nyitott
+                            személyiség. Empatikus, és segített kívülről látni a gondolataimat.”
+                        </p>
+                        <p class="font-medium text-xs text-[#2C2A29]">— Andrea, 50 éves pályamódosító</p>
+                    </div>
+
+                    <div
+                        class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
+                        <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
+                            „Nagyon barátságos. Megnyugtató a jelenléte, könnyen megnyíltam neki. Úgy éreztem végre
+                            figyelnek rám. Segítségével új nézőpontokat kaptam, elkezdtem látni a fényt az alagút
+                            végén.”
+                        </p>
+                        <p class="font-medium text-xs text-[#2C2A29]">— Dóra, két kamaszt nevelő édesanya</p>
+                    </div>
+
+                    <div
+                        class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
+                        <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
+                            „Abszolút biztonságosnak éreztem magam érzelmileg a beszélgetések során és maximálisan
+                            kölcsönös volt ez a bizalom. Teljes mértékben rám figyelt, amikor beszéltem, őszinte
+                            érdeklődést tapasztaltam részéről. Rendkívül jó kérdésekkel világított rá olyan dolgokra,
+                            amikre nem volt aktuális rálátásom.
+                            Kommunikációja nyílt és barátságos volt.”
+                        </p>
+                        <p class="font-medium text-xs text-[#2C2A29]">— Orsi, 35 éves édesanya, pályamódosító</p>
+                    </div>
+
+                    <div
+                        class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
+                        <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
+                            „Megnyugtató a jelenléte. Teljesen Rám fókuszált és az aktuális problémámra, közös témánkra,
+                            összeszedett és alapos volt. Éreztem, hogy biztonságos közegben vagyok.
+                            Nagyon sok dologra reflektál Ilona, amire egyedül nem voltam képes, elindított egy olyan
+                            úton, amit hosszan fent tudok tartani, új szokások kialakításában segített, ami
+                            megváltoztatta a hétköznapjaim.”
+                        </p>
+                        <p class="font-medium text-xs text-[#2C2A29]">— Kati, 36 éves gyógytornász</p>
+                    </div>
+
                 </div>
-
-                <div
-                    class="min-w-[260px] max-w-[300px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
-                    <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
-                        „Nagyon profi. Érthetően fogalmaz, abszolút nyugodt, megnyerő személyiség. Felkészült, jó
-                        szakember”
-                    </p>
-                    <p class="font-medium text-xs text-[#2C2A29]">— Eszter, 36 éves, két kisgyerekes édesanya </p>
-                </div>
-
-                <div
-                    class="min-w-[260px] max-w-[300px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
-                    <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
-                        „Professzionális a kommunikációja. Jól érthető kérdésekkel vezet. Támogató és nyitott
-                        személyiség. Empatikus, és segített kívülről látni a gondolataimat.”
-                    </p>
-                    <p class="font-medium text-xs text-[#2C2A29]">— Andrea, 50 éves pályamódosító</p>
-                </div>
-
-                <div
-                    class="min-w-[260px] max-w-[300px] bg-[#F4F0EA] p-6 rounded-2xl border border-[#EBE5DC] flex flex-col justify-between shadow-sm flex-shrink-0 snap-center">
-                    <p class="text-[#6B5E54] italic text-xs leading-relaxed mb-4">
-                        „Nagyon barátságos. Megnyugtató a jelenléte, könnyen megnyíltam neki. Úgy éreztem végre
-                        figyelnek rám. Segítségével új nézőpontokat kaptam, elkezdtem látni a fényt az alagút végén.”
-                    </p>
-                    <p class="font-medium text-xs text-[#2C2A29]">— Dóra, két kamaszt nevelő édesanya</p>
-                </div>
-
             </div>
         </section>
 
@@ -530,6 +579,7 @@
         document.getElementById('menu-btn').addEventListener('click', () => {
             var mm = document.getElementById('mobile-menu'), mb = document.getElementById('menu-btn');
             var open = mm.classList.toggle('open');
+            mb.classList.invalidate && mb.classList.invalidate(); // fallback
             mb.classList.toggle('is-open', open);
             mb.setAttribute('aria-expanded', open ? 'true' : 'false');
             mb.setAttribute('aria-label', open ? 'Menü bezárása' : 'Menü megnyitása');
@@ -547,6 +597,19 @@
             document.getElementById('cookie-banner').classList.add('hidden');
         });
 
+        // Visszajelzések lapozó nyilak működtetése (egysoros, vízszintes görgetés asztalon és mobilon is)
+        const container = document.getElementById('testimonials-container');
+        const btnLeft = document.getElementById('scroll-left');
+        const btnRight = document.getElementById('scroll-right');
+
+        if (btnLeft && btnRight && container) {
+            btnLeft.addEventListener('click', () => {
+                container.scrollBy({ left: -340, behavior: 'smooth' });
+            });
+            btnRight.addEventListener('click', () => {
+                container.scrollBy({ left: 340, behavior: 'smooth' });
+            });
+        }
     </script>
 </body>
 

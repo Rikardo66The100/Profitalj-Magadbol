@@ -15,7 +15,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kapcsolat | Profitálj magadból</title>
-    <meta name="description" content="Lépj kapcsolatba velünk, foglalj időpontot az ingyenes 30 perces konzultációra.">
+    <meta name="description"
+        content="Lépj kapcsolatba velünk, foglalj időpontot az ingyenes 30 perces konzultációra vagy 60 perces coachingra.">
 
     <!-- Open Graph / Facebook / Messenger SEO -->
     <meta property="og:type" content="website">
@@ -132,8 +133,8 @@
             <div class="text-center space-y-4 max-w-3xl mx-auto">
                 <h1 class="text-4xl sm:text-5xl font-serif text-[#2C2A29]">Kapcsolat</h1>
                 <p class="text-base text-[#6B5E54] font-light">
-                    Keress bizalommal az alábbi elérhetőségeken, vagy foglalj időpontot közvetlenül a naptárban az
-                    ingyenes 30 perces első konzultációra!
+                    Keress bizalommal az alábbi elérhetőségeken, vagy válaszd ki alul a számodra megfelelő konzultációs
+                    típust az időpontfoglaláshoz!
                 </p>
             </div>
 
@@ -208,53 +209,120 @@
 
             </div>
 
-            <!-- CALENDLY IDŐPONTFOGLALÓ  -->
+            <!-- CALENDLY IDŐPONTFOGLALÓ ELEGÁNS GOMB VÁLASZTÓVAL -->
             <section id="idopontfoglalas"
-                class="max-w-4xl mx-auto bg-white px-2 py-4 sm:p-8 rounded-3xl border border-[#EBE5DC] shadow-sm space-y-6">
-                <div class="text-center space-y-2">
-                    <h2 class="text-3xl font-serif text-[#2C2A29]">Foglalj időpontot konzultációra</h2>
-                    <p class="text-sm text-[#6B5E54]">Válassz ki egy neked megfelelő időpontot az alábbi naptárból egy
-                        30 perces, ingyenes első beszélgetésre!</p>
+                class="max-w-4xl mx-auto bg-white dark:bg-[#14110c] px-4 py-6 sm:p-8 rounded-3xl border border-[#EBE5DC] dark:border-[#332e2a] shadow-sm space-y-6 transition-colors">
+                <div class="text-center space-y-3 max-w-xl mx-auto">
+                    <h2 class="text-3xl font-serif text-[#2C2A29] dark:text-[#fff9ea]">Válassz konzultációs típust</h2>
+                    <p class="text-sm text-[#6B5E54] dark:text-[#a89f95]">Kérlek, kattints arra a szolgáltatásra,
+                        amelyre időpontot szeretnél foglalni:</p>
+
+                    <!-- Stílusos tab/gomb váltó -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3">
+                        <button type="button" data-target="30min"
+                            class="consultation-btn px-5 py-3 rounded-2xl text-sm font-medium transition-all border cursor-pointer flex items-center justify-center gap-2 shadow-sm bg-[#4A4440] text-white border-[#4A4440]">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <polyline points="12 7 12 12 15 15"></polyline>
+                            </svg>
+                            Ingyenes 30 perces konzultáció
+                        </button>
+                        <button type="button" data-target="60min"
+                            class="consultation-btn px-5 py-3 rounded-2xl text-sm font-medium transition-all border cursor-pointer flex items-center justify-center gap-2 shadow-sm bg-[#F4F0EA] dark:bg-[#1f1a16] text-[#2C2A29] dark:text-[#fff9ea] border-[#EBE5DC] dark:border-[#332e2a] hover:border-[#8C7A6B]">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            60 perces coaching alkalom
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Calendly beágyazott modul (színei a világos/sötét témához igazodnak) -->
-                <div id="calendly-embed" style="height:700px;"></div>
+                <!-- Calendly beágyazott modul konténer -->
+                <div id="calendly-embed" style="height:700px;" class="transition-opacity duration-300"></div>
+
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
                     async></script>
                 <script>
                     (function () {
                         var host = document.getElementById('calendly-embed');
-                        var BASE = 'https://calendly.com/ilonabarta9/30min';
+                        var buttons = document.querySelectorAll('.consultation-btn');
+
+                        var URLS = {
+                            '30min': 'https://calendly.com/ilonabarta9/30min',
+                            '60min': 'https://calendly.com/ilonabarta9/coachin-idopontok-60-perc'
+                        };
+
                         var COLORS = {
                             light: 'background_color=fffcf5&text_color=14110d&primary_color=4a4440',
                             dark: 'background_color=14110c&text_color=fff9ea&primary_color=e3be4a'
                         };
-                        var current = null;
 
-                        function mode() {
+                        var currentMode = null;
+                        var currentType = '30min';
+
+                        function getMode() {
                             return document.documentElement.classList.contains('dark') ? 'dark' : 'light';
                         }
 
-                        function mount() {
-                            var m = mode();
-                            if (!window.Calendly || m === current) { host.style.opacity = 1; return; }
-                            current = m;
-                            host.innerHTML = '';
-                            Calendly.initInlineWidget({ url: BASE + '?' + COLORS[m], parentElement: host });
-                            host.style.opacity = 1;
+                        function updateButtonStyles(activeType) {
+                            buttons.forEach(function (btn) {
+                                var isTarget = btn.getAttribute('data-target') === activeType;
+                                if (isTarget) {
+                                    btn.className = "consultation-btn px-5 py-3 rounded-2xl text-sm font-medium transition-all border cursor-pointer flex items-center justify-center gap-2 shadow-sm bg-[#4A4440] dark:bg-[#D4AF37] text-white border-transparent";
+                                } else {
+                                    btn.className = "consultation-btn px-5 py-3 rounded-2xl text-sm font-medium transition-all border cursor-pointer flex items-center justify-center gap-2 shadow-sm bg-[#F4F0EA] dark:bg-[#1f1a16] text-[#2C2A29] dark:text-[#fff9ea] border-[#EBE5DC] dark:border-[#332e2a] hover:border-[#8C7A6B]";
+                                }
+                            });
+                        }
+
+                        function loadWidget(type, forced) {
+                            var mode = getMode();
+                            if (!window.Calendly) return;
+
+                            if (mode !== currentMode || type !== currentType || forced) {
+                                currentMode = mode;
+                                currentType = type;
+                                updateButtonStyles(type);
+                                host.style.opacity = 0;
+                                host.innerHTML = '';
+
+                                setTimeout(function () {
+                                    Calendly.initInlineWidget({
+                                        url: URLS[type] + '?' + COLORS[mode],
+                                        parentElement: host
+                                    });
+                                    host.style.opacity = 1;
+                                }, 150);
+                            }
                         }
 
                         function start() {
-                            if (window.Calendly) { mount(); return; }
-                            var tries = 0;
-                            var wait = setInterval(function () {
-                                if (window.Calendly || ++tries > 100) { clearInterval(wait); mount(); }
-                            }, 100);
+                            if (window.Calendly) {
+                                loadWidget('30min', true);
+                            } else {
+                                var tries = 0;
+                                var wait = setInterval(function () {
+                                    if (window.Calendly || ++tries > 100) {
+                                        clearInterval(wait);
+                                        loadWidget('30min', true);
+                                    }
+                                }, 100);
+                            }
                         }
 
+                        // Gomb kattintások kezelése
+                        buttons.forEach(function (btn) {
+                            btn.addEventListener('click', function () {
+                                var type = btn.getAttribute('data-target');
+                                loadWidget(type, false);
+                            });
+                        });
+
                         document.addEventListener('themechange', function () {
-                            host.style.opacity = 0;
-                            setTimeout(mount, 300);
+                            loadWidget(currentType, true);
                         });
 
                         start();
