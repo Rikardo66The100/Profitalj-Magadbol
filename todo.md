@@ -14,8 +14,8 @@ https://www.rackhost.hu/domain ✅
 Design:
 sötét és világos oldal kialakítása ✅
 hover, button effektek barmilyen UI/UX design amivel feldobható az oldal megjelenése ✅
-Telefonos nézetben sötét/világos gomb megfelelő elhelyezése pl mehetne lentre mint egy ilyen lebegő kis gomb iPhone SE-n tesztelj légyszi
-Kapcsolat oldal Calendly oldalra való görgetése fix 
+Telefonos nézetben sötét/világos gomb megfelelő elhelyezése pl mehetne lentre mint egy ilyen lebegő kis gomb iPhone SE-n tesztelj légyszi ✅
+Kapcsolat oldal Calendly oldalra való görgetése fix ✅
 
 Adatvédelmi tájékoztató ✅
 ÁSZF ✅
