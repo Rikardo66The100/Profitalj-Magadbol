@@ -1022,3 +1022,46 @@ header .flex-shrink-0 > a { white-space: nowrap; display: inline-block; }
 #menu-btn.is-open .b1 { transform: translateY(6px) rotate(45deg); }
 #menu-btn.is-open .b2 { opacity: 0; transform: scaleX(.2); }
 #menu-btn.is-open .b3 { transform: translateY(-6px) rotate(-45deg); }
+
+
+/* =====================================================================
+   REVIEWS CAROUSEL + iPHONE ZOOM FIX
+   ===================================================================== */
+/* iOS Safari zooms in on rapid taps (double-tap zoom) and on focused form
+   fields smaller than 16px. These keep pinch-zoom for accessibility but stop
+   the accidental zoom when pressing the arrow buttons / links / inputs. */
+button, a, [role="button"], summary, label, select, input, textarea { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+input, select, textarea { font-size: 16px; }
+#scroll-left, #scroll-right { user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+
+#testimonials-container { overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; scroll-padding-inline: 0; }
+#testimonials-container > div { box-sizing: border-box; }
+
+@media (min-width: 640px) {
+    #testimonials-container > div { width: 340px; min-width: 340px !important; max-width: 340px !important; }
+}
+
+/* Phones: exactly one full card fits the container, arrows sit below it */
+@media (max-width: 639.98px) {
+    #testimonials-container { gap: 1rem; scroll-snap-type: x mandatory; }
+    #testimonials-container > div {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
+    #scroll-left, #scroll-right {
+        top: auto !important;
+        bottom: 0 !important;
+        transform: none !important;
+        width: 2.75rem !important;
+        height: 2.75rem !important;
+    }
+    #scroll-left { left: calc(50% - 3.5rem) !important; right: auto !important; }
+    #scroll-right { right: calc(50% - 3.5rem) !important; left: auto !important; }
+    #scroll-left:active, #scroll-right:active { transform: scale(.92) !important; }
+    #testimonials-container { margin-bottom: 0 !important; }
+    .relative.max-w-6xl { padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 3.5rem !important; }
+}

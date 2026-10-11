@@ -139,10 +139,6 @@
                         class="gold-primary-button inline-flex justify-center items-center bg-[#4A4440] text-white px-8 py-4 rounded-full text-base font-medium hover:bg-[#332E2C] transition-all text-center shadow-md">
                         Kérek egy első beszélgetést
                     </a>
-                    <a href="dijak-es-tudnivalok.html"
-                        class="inline-flex justify-center items-center bg-[#F4F0EA] border border-[#D4C5B9] text-[#2C2A29] px-8 py-4 rounded-full text-base font-medium hover:bg-[#EBE5DC] transition-all text-center">
-                        Díjak és tudnivalók
-                    </a>
                 </div>
                 <p class="text-sm text-[#8C7A6B] italic pt-1">
                     Az első beszélgetés 30 perc és ingyenes.
@@ -435,7 +431,10 @@
                         Tedd meg az első lépést!
                     </a>
                 </div>
-                <p class="text-xs text-[#8C7A6B]">Profitálj Magadból – Önismereti írás és coaching</p>
+                <a href="dijak-es-tudnivalok.html"
+                    class="inline-flex justify-center items-center bg-[#F4F0EA] border border-[#D4C5B9] text-[#2C2A29] px-8 py-4 rounded-full text-base font-medium hover:bg-[#EBE5DC] transition-all text-center">
+                    Díjak és tudnivalók
+                </a>
             </div>
         </section>
 
@@ -449,7 +448,7 @@
             <!-- Visszajelzések konténer nyilakkal és lapozó gombokkal -->
             <div class="relative max-w-6xl mx-auto px-4 sm:px-12">
                 <!-- Bal nyíl gomb -->
-                <button id="scroll-left" aria-label="Előző visszajelzés"
+                <button type="button" id="scroll-left" aria-label="Előző visszajelzés"
                     class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-[#EBE5DC] shadow-md flex items-center justify-center text-[#4A4440] hover:bg-[#F4F0EA] transition-all cursor-pointer">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -458,7 +457,7 @@
                 </button>
 
                 <!-- Jobb nyíl gomb -->
-                <button id="scroll-right" aria-label="Következő visszajelzés"
+                <button type="button" id="scroll-right" aria-label="Következő visszajelzés"
                     class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-[#EBE5DC] shadow-md flex items-center justify-center text-[#4A4440] hover:bg-[#F4F0EA] transition-all cursor-pointer">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -607,11 +606,18 @@
         const btnRight = document.getElementById('scroll-right');
 
         if (btnLeft && btnRight && container) {
-            btnLeft.addEventListener('click', () => {
-                container.scrollBy({ left: -340, behavior: 'smooth' });
+            const step = () => {
+                const card = container.firstElementChild;
+                const gap = parseFloat(getComputedStyle(container).columnGap) || 24;
+                return card ? card.getBoundingClientRect().width + gap : 340;
+            };
+            btnLeft.addEventListener('click', (e) => {
+                e.preventDefault();
+                container.scrollBy({ left: -step(), behavior: 'smooth' });
             });
-            btnRight.addEventListener('click', () => {
-                container.scrollBy({ left: 340, behavior: 'smooth' });
+            btnRight.addEventListener('click', (e) => {
+                e.preventDefault();
+                container.scrollBy({ left: step(), behavior: 'smooth' });
             });
         }
     </script>
