@@ -363,10 +363,14 @@
                 biztosítása érdekében. A részletekről az <a href="adatkezelesi-tajekoztato.html"
                     class="underline text-white hover:text-[#8C7A6B]">Adatkezelési Tájékoztatóban</a> tájékozódhatsz.
             </p>
-            <div class="flex gap-3 w-full sm:w-auto sm:flex-shrink-0 justify-center">
+            <div class="flex flex-col lg:flex-row gap-3 w-full sm:w-auto sm:flex-shrink-0 justify-center items-stretch">
                 <button id="accept-cookies"
                     class="bg-[#8C7A6B] text-white px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium hover:bg-[#726255] transition-all cursor-pointer text-center leading-snug w-full sm:w-auto sm:max-w-[16rem]">
                     Csak a szükséges sütik elfogadása
+                </button>
+                <button id="accept-all-cookies"
+                    class="bg-[#8C7A6B] text-white px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium hover:bg-[#726255] transition-all cursor-pointer text-center leading-snug w-full sm:w-auto sm:max-w-[16rem]">
+                    Minden süti elfogadása
                 </button>
             </div>
         </div>
@@ -389,9 +393,11 @@
             }
         });
 
-        document.getElementById('accept-cookies').addEventListener('click', () => {
-            localStorage.setItem('cookieConsent', 'accepted');
-            document.getElementById('cookie-banner').classList.add('hidden');
+        ['accept-cookies', 'accept-all-cookies'].forEach((id) => {
+            document.getElementById(id).addEventListener('click', () => {
+                localStorage.setItem('cookieConsent', 'accepted');
+                document.getElementById('cookie-banner').classList.add('hidden');
+            });
         });
     </script>
 </body>
