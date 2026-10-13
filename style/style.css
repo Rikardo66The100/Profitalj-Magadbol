@@ -1175,3 +1175,30 @@ input, select, textarea { font-size: 16px; }
 #cookie-banner button { width: 100%; }
 @media (min-width: 640px) { #cookie-banner button { width: 100%; max-width: 16rem; } }
 @media (min-width: 1024px) { #cookie-banner button { width: auto; } }
+
+/* Application form: larger, easier-to-tap radio buttons and checkboxes */
+#application-form input[type="radio"],
+#application-form input[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    margin-top: .1rem !important;
+    cursor: pointer;
+    accent-color: #8C7A6B;
+}
+
+#application-form label.flex {
+    cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #application-form input[type="radio"]:hover,
+    #application-form input[type="checkbox"]:hover {
+        transform: scale(1.1);
+    }
+}
+
+html.dark #application-form input[type="radio"],
+html.dark #application-form input[type="checkbox"] {
+    accent-color: var(--gold);
+}
