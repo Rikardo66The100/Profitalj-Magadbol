@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style/style.css">
     <script src="style/theme.js"></script>
+    <script src="style/consent.js" defer></script>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
@@ -98,7 +99,7 @@
                 class="bg-white dark:bg-[#1b1a18] p-6 sm:p-9 rounded-3xl border border-[#EBE5DC] space-y-7">
 
                 <input type="hidden" name="_subject" value="Új jelentkezés – Profitálj magadból"><input type="hidden"
-                    name="_next" value="https://profitaljmagadbol.hu/jelentkezes-sikeres.html"><input type="text"
+                    name="_next" value="https://profitaljmagadbol.hu/jelentkezes-sikeres.html?submitted=1"><input type="text"
                     name="_honey" style="display:none">
 
                 <div>
@@ -210,13 +211,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="style/consent.js"></script>
-    <script>
-        document.getElementById('application-form').addEventListener('submit', function () {
-            try { var c = JSON.parse(localStorage.getItem('pm_cookie_consent_v1') || 'null'); if (c && c.marketing === true) sessionStorage.setItem('pm_application_submit_pending', '1'); } catch (e) { }
-        });
-    </script>
 </body>
 
 </html>
