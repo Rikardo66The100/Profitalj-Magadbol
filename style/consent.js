@@ -1,6 +1,4 @@
 /*
- * Süti-hozzájárulás + Google Analytics + Meta Pixel – egyetlen fájl, minden oldalon a <head>-ben:
- *   <script src="style/consent.js" defer></script>
  *
  * BEÁLLÍTÁS: csak az alábbi két azonosítót kell kicserélni (amíg placeholder, semmi nem töltődik be).
  * Kategóriák: szükséges (mindig), analitika (Google Analytics), marketing (Meta Pixel).
