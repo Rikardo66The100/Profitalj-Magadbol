@@ -2,17 +2,7 @@
 <html lang="hu" class="scroll-smooth">
 
 <head>
-    <!-- Google tag  -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-XXXXXXXXXX'); // IDE KELL A SAJÁT AZONOSÍTÓ GOOGLE ANALYTICSRŐL
-    </script>
-
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profitálj magadból | Önismereti írás és coaching</title>
     <meta name="description"
@@ -80,7 +70,7 @@
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                         </svg></button>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrrNCX_jp0Sq5mxBZQjjbypom2u6VNRC_wHW2hsLeYZyT-oA/viewform"
+                    <a href="kerdoiv.html"
                         target="_blank"
                         class="gold-primary-button bg-[#4A4440] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#332E2C] transition-all">
                         Tedd meg az első lépést!</a>
@@ -114,7 +104,7 @@
             <a href="rolam.html" class="block hover:text-[#8C7A6B]">Rólam</a>
             <a href="dijak-es-tudnivalok.html" class="block hover:text-[#8C7A6B]">Díjak és tudnivalók</a>
             <a href="kapcsolat.html" class="block hover:text-[#8C7A6B]">Kapcsolat</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrrNCX_jp0Sq5mxBZQjjbypom2u6VNRC_wHW2hsLeYZyT-oA/viewform"
+            <a href="kerdoiv.html"
                 target="_blank"
                 class="gold-primary-button bg-[#4A4440] text-white px-6 py-3 rounded-full text-sm font-medium text-center block mt-2">Tedd
                 meg az első lépést!</a>
@@ -160,7 +150,7 @@
             <div class="lg:col-span-5 flex justify-center items-center">
                 <div
                     class="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden border border-[#EBE5DC] shadow-xl bg-[#F4F0EA] flex items-center justify-center p-2">
-                    <img src="imgs/portré.jpg" alt="" class="w-full h-full object-contain rounded-2xl">
+                    <img src="imgs/portre.jpg" alt="" class="w-full h-full object-contain rounded-2xl">
                 </div>
             </div>
 
@@ -437,7 +427,7 @@
                     benned van.
                 </p>
                 <div>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrrNCX_jp0Sq5mxBZQjjbypom2u6VNRC_wHW2hsLeYZyT-oA/viewform"
+                    <a href="kerdoiv.html"
                         target="_blank"
                         class="gold-primary-button inline-flex justify-center items-center bg-[#4A4440] text-white px-10 py-4 rounded-full text-base font-medium hover:bg-[#332E2C] transition-all shadow-md">
                         Tedd meg az első lépést!
@@ -571,28 +561,6 @@
         </div>
     </footer>
 
-    <!-- SÜTI (COOKIE) BANNER -->
-    <div id="cookie-banner"
-        class="fixed bottom-0 inset-x-0 z-50 bg-[#2C2A29] text-[#FBF9F5] p-4 sm:p-6 shadow-2xl border-t border-[#4A4440] hidden">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="text-xs sm:text-sm text-[#A89F95] text-center sm:text-left flex-1 min-w-0 leading-relaxed">
-                Ez a weboldal sütiket (cookie-kat) használ a jobb felhasználói élmény és a weboldal működésének
-                biztosítása érdekében. A részletekről az <a href="adatkezelesi-tajekoztato.html"
-                    class="underline text-white hover:text-[#8C7A6B]">Adatkezelési Tájékoztatóban</a> tájékozódhatsz.
-            </p>
-            <div class="flex flex-col lg:flex-row gap-3 w-full sm:w-auto sm:flex-shrink-0 justify-center items-stretch">
-                <button id="accept-cookies"
-                    class="bg-[#8C7A6B] text-white px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium hover:bg-[#726255] transition-all cursor-pointer text-center leading-snug w-full sm:w-auto sm:max-w-[16rem]">
-                    Csak a szükséges sütik elfogadása
-                </button>
-                <button id="accept-all-cookies"
-                    class="bg-[#8C7A6B] text-white px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium hover:bg-[#726255] transition-all cursor-pointer text-center leading-snug w-full sm:w-auto sm:max-w-[16rem]">
-                    Minden süti elfogadása
-                </button>
-            </div>
-        </div>
-    </div>
-
     <script>
         // Mobil menü
         document.getElementById('menu-btn').addEventListener('click', () => {
@@ -602,20 +570,6 @@
             mb.classList.toggle('is-open', open);
             mb.setAttribute('aria-expanded', open ? 'true' : 'false');
             mb.setAttribute('aria-label', open ? 'Menü bezárása' : 'Menü megnyitása');
-        });
-
-        // Süti kezelő logika
-        window.addEventListener('DOMContentLoaded', () => {
-            if (!localStorage.getItem('cookieConsent')) {
-                document.getElementById('cookie-banner').classList.remove('hidden');
-            }
-        });
-
-        ['accept-cookies', 'accept-all-cookies'].forEach((id) => {
-            document.getElementById(id).addEventListener('click', () => {
-                localStorage.setItem('cookieConsent', 'accepted');
-                document.getElementById('cookie-banner').classList.add('hidden');
-            });
         });
 
         // Visszajelzések lapozó nyilak működtetése (egysoros, vízszintes görgetés asztalon és mobilon is)
@@ -639,6 +593,7 @@
             });
         }
     </script>
+    <script src="style/consent.js" defer></script>
 </body>
 
 </html>

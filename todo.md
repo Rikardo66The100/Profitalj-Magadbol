@@ -1,12 +1,10 @@
 domain nev foglalas - rackhost profitaljmagadbol.hu ✅
-email kapcsolat@profitaljmagadbol.hu regisztrálása
+email kapcsolat@profitaljmagadbol.hu regisztrálása ✅
 hírlevél feliratkozás ????
-kapcsolat - instagram/facebook/tel/mailto/forms ✅
+kapcsolat - instagram/facebook/tel/mailto/kérdőív ✅
 rólam - szöveg ✅
 kezdőlap - kép és szöveg ✅
-HA mindem megvan suliban meg kell csinálni a Google Analytics ID-ját, de ahhoz már létező weboldal kell.
 
-Adattárolás és későbbiekben email küldése vagy calendly-> rackhost webtárhely
 rackhost:
 https://www.rackhost.hu/webtarhely - MINI 2 GB ✅
 https://www.rackhost.hu/domain ✅
@@ -25,11 +23,10 @@ Sütik button ✅
 
 Lépések: 
 Megegyezés az emailben. kapcsolat vagy info@profitaljmagadbol.hu ✅
-Calendly regisztrálása, Google Analytics regisztrálása saját email címmel. ✅
 Weboldalon lévő elérhetőségi adatok frissítése, előre átírni a majd foglalt email címre. ✅
 Képtömörítés 300kb alá. https://squoosh.app/editor ✅
 
-Díjak aktuális adatokra cserélése. ✅
-Rackhost beállítása, domain hozzárendelése, kapcsolati email létrehozása. 
+Rackhost beállítása, domain hozzárendelése, kapcsolati email létrehozása. ✅
 (Favicon találása) ✅
-Impresszum, GDPR, ÁSZF frissítése, hogy jogilag minden biztonságos legyen. ✅
+Impresszum, GDPR, ÁSZF frissítése, hogy jogilag minden biztonságos legyen TELJESEN ÁT KELL ÍRNI.
+Meta Pixel: azonosító beállítása a style/consent.js fájlban, majd események és hozzájárulás tesztelése.
