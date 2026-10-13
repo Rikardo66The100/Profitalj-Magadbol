@@ -476,6 +476,70 @@ html.dark .contact-card-hover:hover .icon-box {
    ===================================================================== */
 @media (hover: hover) and (pointer: fine) {
 
+    /* Consultation switch buttons: same lift + shine + gold as the main buttons */
+    .consultation-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .consultation-btn:hover::after {
+        transform: translateX(130%);
+    }
+
+    /* selected (filled) button */
+    html:not(.dark) .consultation-btn.bg-\[\#4A4440\]:hover {
+        box-shadow: 0 14px 28px -12px rgba(44, 42, 41, .55);
+    }
+
+    html.dark .consultation-btn.bg-\[\#4A4440\]:hover,
+    html.dark .consultation-btn.dark\:bg-\[\#D4AF37\]:hover {
+        background-position: 100% 0;
+        box-shadow: 0 16px 36px -10px rgba(226, 191, 85, .6);
+    }
+
+    /* unselected (outlined) button, light theme */
+    html:not(.dark) .consultation-btn.bg-\[\#F4F0EA\]:hover {
+        background-color: #EBE5DC;
+        border-color: #8C7A6B;
+        color: #4A4440;
+        box-shadow: 0 10px 22px -12px rgba(74, 68, 64, .35);
+    }
+
+    /* unselected (outlined) button, dark theme */
+    html.dark .consultation-btn.bg-\[\#F4F0EA\]:hover,
+    html.dark .consultation-btn:not(.bg-\[\#4A4440\]):hover {
+        background-color: rgba(212, 175, 55, .14);
+        border-color: var(--gold);
+        color: var(--gold-light);
+        box-shadow: 0 10px 26px -12px rgba(212, 175, 55, .55);
+    }
+
+    /* Logo, mobile menu button, form option rows */
+    header a[href="index.html"].font-serif:hover {
+        color: #8C7A6B;
+        transform: translateY(-1px);
+    }
+
+    html.dark header a[href="index.html"].font-serif:hover {
+        color: var(--gold-light);
+    }
+
+    #menu-btn:hover {
+        color: #8C7A6B;
+        transform: scale(1.1);
+    }
+
+    html.dark #menu-btn:hover {
+        color: var(--gold-light);
+    }
+
+    label.flex:hover {
+        color: #8C7A6B;
+    }
+
+    html.dark label.flex:hover {
+        color: var(--gold-light);
+    }
+
     /* Menu */
     header nav a:hover::after {
         transform: scaleX(1);
@@ -605,6 +669,35 @@ html.dark .contact-card-hover:hover .icon-box {
 header nav a:active,
 footer a:active {
     opacity: .7;
+}
+
+/* ---------- Consultation switch buttons (kapcsolat.html) + extra hover polish ---------- */
+.consultation-btn {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.consultation-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, .28) 50%, transparent 65%);
+    transform: translateX(-130%);
+    transition: transform .75s ease;
+}
+
+.consultation-btn:active {
+    transform: translateY(0) scale(.97) !important;
+    transition-duration: .1s;
+}
+
+header a[href="index.html"].font-serif,
+#menu-btn,
+label.flex {
+    transition: color .3s ease, transform .3s ease, opacity .3s ease;
 }
 
 /* Respect people who prefer less motion */
