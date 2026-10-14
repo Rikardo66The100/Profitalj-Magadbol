@@ -7,8 +7,8 @@
 (() => {
   'use strict';
 
-  const GA_ID = 'G-XXXXXXXXXX';                  // Google Analytics 4 mérési azonosító
-  const META_PIXEL_ID = 'META_PIXEL_ID_PLACEHOLDER'; // Meta Pixel azonosító (csak számjegyek)
+  const GA_ID = 'G-964WZXK9DF';                  // Google Analytics 4 mérési azonosító
+  const META_PIXEL_ID = '1107581271648986';        // Meta Pixel azonosító
 
   const CONSENT_KEY = 'pm_cookie_consent_v1';
   const SUBMIT_FLAG = 'pm_application_submit_pending';
