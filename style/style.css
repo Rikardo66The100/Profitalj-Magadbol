@@ -873,10 +873,39 @@ html:not(.dark) #cookie-banner .hover\:text-\[\#8C7A6B\]:hover {
     color: #F0E3C8;
 }
 
-/* ---------- Calendly booking box ---------- */
+/* ---------- Calendly booking box ----------
+   The widget is a cross-origin iframe, so site CSS cannot restyle its inside, and Calendly only
+   applies colour parameters on a paid plan. Until then the iframe is recoloured with filters:
+   - light: hue-rotate turns Calendly's blue into gold; multiply blends its white onto the box colour
+   - dark:  invert makes it dark (blue -> orange), hue-rotate nudges that to gold; lighten blends its
+            black onto the box colour.
+   Theme switch = instant (pure CSS). With a paid plan set NATIVE_COLORS = true in kapcsolat.html
+   and the filters switch off (.native-colors). */
 #calendly-embed {
     position: relative;
-    transition: opacity .3s ease;
+    height: 1000px;                 /* phones: the calendar, time list and form stack up */
+    border-radius: 1rem;
+    overflow: hidden;
+    isolation: isolate;
+    background-color: #FFFCF5;      /* = light-theme card */
+    opacity: 0;
+    transition: opacity .3s ease, background-color .3s ease;
+}
+
+#calendly-embed.is-ready {
+    opacity: 1;
+}
+
+html.dark #calendly-embed {
+    background-color: #14110C;      /* = dark-theme card (--card) */
+}
+
+@media (min-width: 640px) {
+    #calendly-embed { height: 760px; }
+}
+
+#calendly-embed .calendly-inline-widget {
+    height: 100% !important;       /* Calendly's own css sets a fixed height; follow the box */
 }
 
 #calendly-embed iframe {
@@ -884,6 +913,17 @@ html:not(.dark) #cookie-banner .hover\:text-\[\#8C7A6B\]:hover {
     height: 100%;
     border: 0;
     display: block;
+}
+
+#calendly-embed:not(.native-colors) iframe {
+    mix-blend-mode: multiply;
+    filter: hue-rotate(196deg) saturate(.8) brightness(1.4);
+    transition: filter .3s ease;
+}
+
+html.dark #calendly-embed:not(.native-colors) iframe {
+    mix-blend-mode: lighten;
+    filter: invert(1) hue-rotate(12deg) saturate(.8) brightness(1.15);
 }
 
 
