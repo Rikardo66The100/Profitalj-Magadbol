@@ -915,6 +915,13 @@ html.dark #calendly-embed {
     display: block;
 }
 
+/* Calendly keeps its "loading dots" behind the iframe (z-index -1) and relies on the iframe being
+   opaque. The blend modes below make the iframe's background see-through, so the dots would shine
+   through for good. They are not needed: the box fades in on its own. */
+#calendly-embed .calendly-spinner {
+    display: none !important;
+}
+
 #calendly-embed:not(.native-colors) iframe {
     mix-blend-mode: multiply;
     filter: hue-rotate(196deg) saturate(.8) brightness(1.4);
