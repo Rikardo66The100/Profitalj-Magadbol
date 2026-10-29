@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingyenes első beszélgetés menete | Profitálj magadból</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="style/theme.js"></script>
+    <script src="style/consent.js" defer></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
+    <link rel="manifest" href="imgs/site.webmanifest">
+</head>
+
+<body class="bg-[#FBF9F5] text-[#2C2A29] font-sans antialiased text-base leading-relaxed flex flex-col min-h-screen">
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-[#FBF9F5]/90 backdrop-blur-md border-b border-[#EBE5DC]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-xl font-serif tracking-wider font-semibold text-[#4A4440]">
+                        PROFITÁLJ <span class="font-light text-[#8C7A6B]">MAGADBÓL</span>
+                    </a>
+                </div>
+                <nav class="hidden lg:flex space-x-8 whitespace-nowrap text-base font-medium tracking-wide">
+                    <a href="index.html" class="text-[#8C7A6B] transition-colors">Kezdőlap</a>
+                    <a href="rolam.html" class="hover:text-[#8C7A6B] transition-colors">Rólam</a>
+                    <a href="dijak-es-tudnivalok.html" class="hover:text-[#8C7A6B] transition-colors">Díjak és
+                        tudnivalók</a>
+                    <a href="kapcsolat.html" class="hover:text-[#8C7A6B] transition-colors">Kapcsolat</a>
+                </nav>
+                <div class="hidden lg:flex items-center gap-3">
+                    <button type="button" class="theme-toggle" aria-label="Sötét mód bekapcsolása"
+                        title="Sötét mód bekapcsolása" aria-pressed="false"><svg class="icon-sun" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4" />
+                            <path
+                                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                        </svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg></button>
+                    <a href="beszelgetes-menete.html" target="_blank"
+                        class="gold-primary-button bg-[#4A4440] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#332E2C] transition-all">
+                        Ingyenes beszélgetés menete</a>
+                </div>
+                <div class="lg:hidden flex items-center gap-2 flex-shrink-0">
+                    <button type="button" class="theme-toggle" aria-label="Sötét mód bekapcsolása"
+                        title="Sötét mód bekapcsolása" aria-pressed="false"><svg class="icon-sun" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4" />
+                            <path
+                                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                        </svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg></button>
+                    <button id="menu-btn" class="text-[#4A4440]" aria-label="Menü megnyitása" aria-expanded="false"
+                        aria-controls="mobile-menu"><svg class="w-7 h-7 burger" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round">
+                            <line class="b1" x1="4" y1="6" x2="20" y2="6" />
+                            <line class="b2" x1="4" y1="12" x2="20" y2="12" />
+                            <line class="b3" x1="4" y1="18" x2="20" y2="18" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="lg:hidden bg-[#FBF9F5] border-b border-[#EBE5DC] px-6 pt-3 pb-6 space-y-4 text-base">
+            <a href="index.html" class="block text-[#8C7A6B] font-semibold">Kezdőlap</a>
+            <a href="rolam.html" class="block hover:text-[#8C7A6B]">Rólam</a>
+            <a href="dijak-es-tudnivalok.html" class="block hover:text-[#8C7A6B]">Díjak és tudnivalók</a>
+            <a href="kapcsolat.html" class="block hover:text-[#8C7A6B]">Kapcsolat</a>
+            <a href="kerdoiv.html" target="_blank"
+                class="gold-primary-button bg-[#4A4440] text-white px-6 py-3 rounded-full text-sm font-medium text-center block mt-2">Tedd
+                meg az első lépést!</a>
+        </div>
+    </header>
+
+    <main class="flex-grow py-12 md:py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <p class="text-sm uppercase tracking-[.2em] text-[#8C7A6B] mb-3"><i>Profitálj magadból • Barta Ilona</i></p>
+
+            <h1 class="text-3xl sm:text-4xl font-serif mb-4">Ingyenes első beszélgetés menete</h1>
+            <p class="mb-8 text-[#6B5E54]">
+                Szeretnél változtatni, de újra és újra elhalasztod az első lépést? Egy fontos döntés foglalkoztat, és
+                szeretnéd megérteni, mi tart vissza?
+            </p> 
+            <p class="mb-8 text-[#6B5E54]">
+                Az ingyenes első beszélgetésen elmondhatod, miben keresel segítséget, felteheted a kérdéseidet, és
+                megismerheted, hogyan dolgozom. Közösen megnézzük, hogy a coaching és a velem való munka megfelelő
+                lehetőség-e számodra.
+            </p> 
+            <h1 class="text-3xl sm:text-4xl font-serif mb-4">Mi történik a 30 percben?</h1>
+            <p class="mb-8 text-[#6B5E54]">
+                <strong>Elmondod, mi foglalkoztat.</strong> Röviden bemutatod a helyzetedet és azt, miben szeretnél
+                előrelépni. Nem kell előre pontos célt megfogalmaznod. Kérdésekkel segítek körvonalazni a témát.
+            </p>
+            <p class="mb-8 text-[#6B5E54]">
+                <strong>Megnézzük a közös munka lehetőségét.</strong> Összefoglalom, hogyan értettem a helyzetedet, te
+                pedig
+                pontosíthatod. Megnézzük, hogy a témád coachingtéma-e. Átbeszéljük, miben tudlak coachinggal támogatni.
+            </p>
+            <p class="mb-8 text-[#6B5E54]">
+                <strong>Megismered a folyamatot és a feltételeket.</strong> Elmondom, hogyan zajlanak az alkalmak,
+                milyen saját munkára
+                számíthatsz közöttük, és egyeztetünk az időpontokról, a találkozás módjáról és a díjazásról. A
+                kérdéseidre is jut idő.
+            </p>
+            <h1 class="text-3xl sm:text-4xl font-serif mb-4">Bizalmas figyelem és szabad döntés</h1>
+            <p class="mb-8 text-[#6B5E54]">
+                A beszélgetést bizalmasan kezelem, és nem készítek róla felvételt. Ha közben jegyzetelek, az a figyelmes
+                követést szolgálja. Annyit osztasz meg, amennyit ezen az első találkozáson szeretnél.
+            </p>
+            <p class="mb-8 text-[#6B5E54]">
+                Ez egy ismerkedő és egyeztető alkalom. A témád részletes feldolgozására és a konkrét cél kialakítására a
+                fizetős coaching keretében kerül sor. A beszélgetés végén nem kell azonnal döntened a folytatásról.
+            </p>
+            <h1 class="text-3xl sm:text-4xl font-serif mb-4"></h1>
+            <p class="mb-8 text-[#6B5E54]"> Nem kell rögtön rábólintanod a következő alkalomra. Aludhatsz egyet rá. </p>
+            <p class="mb-8 text-[#6B5E54]">De ha mindketten megfelelőnek látjuk az együttműködést, egyeztetjük a következő lépést. <strong>A Bátor Kezdés</strong> egy 60 perces, egyéni coachingalkalom, díja 20 000 Ft. </p>
+            <p class="mb-8 text-[#6B5E54]">
+                A témádhoz illő további lehetőségeket is átbeszéljük. Elköteleződés előtt megismered az együttműködés és a lemondás feltételeit.
+            </p>
+            <div class="pt-4 text-center">
+                    <a href="kapcsolat.html"
+                        class="gold-primary-button inline-flex justify-center items-center bg-[#4A4440] text-white px-8 py-4 rounded-full text-base font-medium hover:bg-[#332E2C] transition-all">
+                        Bejelentkezem az ingyenes beszélgetésre
+                    </a>
+                </div>
+    </main>
+
+    <footer class="bg-[#2C2A29] text-[#FBF9F5] py-12">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="text-lg font-serif tracking-wider font-semibold">PROFITÁLJ MAGADBÓL</span>
+                <p class="text-xs text-[#A89F95] mt-1">&copy; 2026 Minden jog fenntartva.</p>
+            </div>
+            <div
+                class="flex flex-wrap justify-center md:justify-end items-center gap-x-6 gap-y-2 text-sm text-[#A89F95]">
+                <a href="index.html" class="hover:text-white transition-colors">Kezdőlap</a>
+                <a href="rolam.html" class="hover:text-white transition-colors">Rólam</a>
+                <a href="dijak-es-tudnivalok.html" class="hover:text-white transition-colors">Díjak és tudnivalók</a>
+                <a href="kapcsolat.html" class="hover:text-white transition-colors">Kapcsolat</a>
+                <a href="aszf.html" class="hover:text-white transition-colors">ÁSZF</a>
+                <a href="adatkezelesi-tajekoztato.html" class="hover:text-white transition-colors">Adatkezelés</a>
+                <a href="impresszum.html" class="hover:text-white transition-colors">Impresszum</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
