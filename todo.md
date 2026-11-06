@@ -1,6 +1,6 @@
 domain nev foglalas - rackhost profitaljmagadbol.hu ✅
 email kapcsolat@profitaljmagadbol.hu regisztrálása ✅
-hírlevél feliratkozás ????
+hírlevél feliratkozás ???? https://www.mailerlite.com
 kapcsolat - instagram/facebook/tel/mailto/kérdőív ✅
 rólam - szöveg ✅
 kezdőlap - kép és szöveg ✅
