@@ -229,13 +229,24 @@
                         });
                     })();
 
-                    window.addEventListener('message', function(e) 
-                    {
-                        if (e.data.event && e.data.event === 'calendly.event_scheduled')
-                        {
-                            fbq('track', 'Schedule', { content_name: 'Calendly Időpontfoglalás'});
-                        }
-                    });
+                    window.addEventListener('message', function (e) {
+    if (e.origin !== 'https://calendly.com') return;
+
+    console.log('[Calendly Message]', e.data);
+
+    if (e.data?.event === 'calendly.event_scheduled') {
+        console.log('[Calendly] Booking event received!');
+        console.log('[Meta Pixel] fbq available:', typeof window.fbq);
+
+        if (typeof window.fbq === 'function') {
+            fbq('track', 'Schedule', {
+                content_name: 'Calendly Időpontfoglalás'
+            });
+
+            console.log('[Meta Pixel] Schedule command executed!');
+        }
+    }
+});
                 </script>
             </section>
 
