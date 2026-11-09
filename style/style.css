@@ -476,6 +476,70 @@ html.dark .contact-card-hover:hover .icon-box {
    ===================================================================== */
 @media (hover: hover) and (pointer: fine) {
 
+    /* Consultation switch buttons: same lift + shine + gold as the main buttons */
+    .consultation-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .consultation-btn:hover::after {
+        transform: translateX(130%);
+    }
+
+    /* selected (filled) button */
+    html:not(.dark) .consultation-btn.bg-\[\#4A4440\]:hover {
+        box-shadow: 0 14px 28px -12px rgba(44, 42, 41, .55);
+    }
+
+    html.dark .consultation-btn.bg-\[\#4A4440\]:hover,
+    html.dark .consultation-btn.dark\:bg-\[\#D4AF37\]:hover {
+        background-position: 100% 0;
+        box-shadow: 0 16px 36px -10px rgba(226, 191, 85, .6);
+    }
+
+    /* unselected (outlined) button, light theme */
+    html:not(.dark) .consultation-btn.bg-\[\#F4F0EA\]:hover {
+        background-color: #EBE5DC;
+        border-color: #8C7A6B;
+        color: #4A4440;
+        box-shadow: 0 10px 22px -12px rgba(74, 68, 64, .35);
+    }
+
+    /* unselected (outlined) button, dark theme */
+    html.dark .consultation-btn.bg-\[\#F4F0EA\]:hover,
+    html.dark .consultation-btn:not(.bg-\[\#4A4440\]):hover {
+        background-color: rgba(212, 175, 55, .14);
+        border-color: var(--gold);
+        color: var(--gold-light);
+        box-shadow: 0 10px 26px -12px rgba(212, 175, 55, .55);
+    }
+
+    /* Logo, mobile menu button, form option rows */
+    header a[href="index.html"].font-serif:hover {
+        color: #8C7A6B;
+        transform: translateY(-1px);
+    }
+
+    html.dark header a[href="index.html"].font-serif:hover {
+        color: var(--gold-light);
+    }
+
+    #menu-btn:hover {
+        color: #8C7A6B;
+        transform: scale(1.1);
+    }
+
+    html.dark #menu-btn:hover {
+        color: var(--gold-light);
+    }
+
+    label.flex:hover {
+        color: #8C7A6B;
+    }
+
+    html.dark label.flex:hover {
+        color: var(--gold-light);
+    }
+
     /* Menu */
     header nav a:hover::after {
         transform: scaleX(1);
@@ -605,6 +669,35 @@ html.dark .contact-card-hover:hover .icon-box {
 header nav a:active,
 footer a:active {
     opacity: .7;
+}
+
+/* ---------- Consultation switch buttons (kapcsolat.html) + extra hover polish ---------- */
+.consultation-btn {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.consultation-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, .28) 50%, transparent 65%);
+    transform: translateX(-130%);
+    transition: transform .75s ease;
+}
+
+.consultation-btn:active {
+    transform: translateY(0) scale(.97) !important;
+    transition-duration: .1s;
+}
+
+header a[href="index.html"].font-serif,
+#menu-btn,
+label.flex {
+    transition: color .3s ease, transform .3s ease, opacity .3s ease;
 }
 
 /* Respect people who prefer less motion */
@@ -780,10 +873,39 @@ html:not(.dark) #cookie-banner .hover\:text-\[\#8C7A6B\]:hover {
     color: #F0E3C8;
 }
 
-/* ---------- Calendly booking box ---------- */
+/* ---------- Calendly booking box ----------
+   The widget is a cross-origin iframe, so site CSS cannot restyle its inside, and Calendly only
+   applies colour parameters on a paid plan. Until then the iframe is recoloured with filters:
+   - light: hue-rotate turns Calendly's blue into gold; multiply blends its white onto the box colour
+   - dark:  invert makes it dark (blue -> orange), hue-rotate nudges that to gold; lighten blends its
+            black onto the box colour.
+   Theme switch = instant (pure CSS). With a paid plan set NATIVE_COLORS = true in kapcsolat.html
+   and the filters switch off (.native-colors). */
 #calendly-embed {
     position: relative;
-    transition: opacity .3s ease;
+    height: 1000px;                 /* phones: the calendar, time list and form stack up */
+    border-radius: 1rem;
+    overflow: hidden;
+    isolation: isolate;
+    background-color: #FFFCF5;      /* = light-theme card */
+    opacity: 0;
+    transition: opacity .3s ease, background-color .3s ease;
+}
+
+#calendly-embed.is-ready {
+    opacity: 1;
+}
+
+html.dark #calendly-embed {
+    background-color: #14110C;      /* = dark-theme card (--card) */
+}
+
+@media (min-width: 640px) {
+    #calendly-embed { height: 760px; }
+}
+
+#calendly-embed .calendly-inline-widget {
+    height: 100% !important;       /* Calendly's own css sets a fixed height; follow the box */
 }
 
 #calendly-embed iframe {
@@ -791,6 +913,24 @@ html:not(.dark) #cookie-banner .hover\:text-\[\#8C7A6B\]:hover {
     height: 100%;
     border: 0;
     display: block;
+}
+
+/* Calendly keeps its "loading dots" behind the iframe (z-index -1) and relies on the iframe being
+   opaque. The blend modes below make the iframe's background see-through, so the dots would shine
+   through for good. They are not needed: the box fades in on its own. */
+#calendly-embed .calendly-spinner {
+    display: none !important;
+}
+
+#calendly-embed:not(.native-colors) iframe {
+    mix-blend-mode: multiply;
+    filter: hue-rotate(196deg) saturate(.8) brightness(1.4);
+    transition: filter .3s ease;
+}
+
+html.dark #calendly-embed:not(.native-colors) iframe {
+    mix-blend-mode: lighten;
+    filter: invert(1) hue-rotate(12deg) saturate(.8) brightness(1.15);
 }
 
 
@@ -1082,3 +1222,30 @@ input, select, textarea { font-size: 16px; }
 #cookie-banner button { width: 100%; }
 @media (min-width: 640px) { #cookie-banner button { width: 100%; max-width: 16rem; } }
 @media (min-width: 1024px) { #cookie-banner button { width: auto; } }
+
+/* Application form: larger, easier-to-tap radio buttons and checkboxes */
+#application-form input[type="radio"],
+#application-form input[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    margin-top: .1rem !important;
+    cursor: pointer;
+    accent-color: #8C7A6B;
+}
+
+#application-form label.flex {
+    cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #application-form input[type="radio"]:hover,
+    #application-form input[type="checkbox"]:hover {
+        transform: scale(1.1);
+    }
+}
+
+html.dark #application-form input[type="radio"],
+html.dark #application-form input[type="checkbox"] {
+    accent-color: var(--gold);
+}

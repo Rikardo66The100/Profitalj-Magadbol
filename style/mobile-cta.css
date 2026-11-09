@@ -1,0 +1,36 @@
+/* Mobil, ragadós CTA-sáv (csak telefon/tablet). A gomb a meglévő oldal-CTA másolata:
+   ugyanaz a szöveg, ugyanaz a .gold-primary-button stílus. */
+#m-cta {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 40; /* a süti-banner (z-50) és a fejléc (z-50) fölött marad */
+  box-sizing: border-box;
+  padding: .625rem 1rem max(.625rem, env(safe-area-inset-bottom));
+  border-top: 1px solid rgba(140, 122, 107, .25);
+  transform: translateY(110%);
+  visibility: hidden;
+  transition: transform .28s ease, visibility 0s linear .28s;
+}
+#m-cta.is-visible {
+  transform: none;
+  visibility: visible;
+  transition: transform .28s ease;
+}
+#m-cta a {
+  display: flex;
+  width: 100%;
+  min-height: 3.25rem; /* ≥ 52 px érintési felület */
+  margin: 0;
+}
+html.m-cta-on body { padding-bottom: calc(4.75rem + env(safe-area-inset-bottom)); }
+@media (min-width: 1024px) { #m-cta { display: none !important; } html.m-cta-on body { padding-bottom: 0; } }
+@media (prefers-reduced-motion: reduce) { #m-cta, #m-cta.is-visible { transition: none; } }
+
+/* A foglalási szekció a ragadós fejléc alá ne csússzon be */
+#idopontfoglalas { scroll-margin-top: 6rem; }
+
+/* Beküldés közben a gomb nem nyomható újra */
+#application-form button[type="submit"][disabled] { opacity: .65; cursor: progress; }
+@media (max-width: 639.98px) {
+  #application-form button[type="submit"] { display: block; width: 100%; min-height: 3.25rem; }
+}

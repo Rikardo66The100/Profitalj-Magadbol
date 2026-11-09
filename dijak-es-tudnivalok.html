@@ -2,16 +2,6 @@
 <html lang="hu" class="scroll-smooth">
 
 <head>
-    <!-- Google tag  -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-XXXXXXXXXX'); // IDE KELL A SAJÁT AZONOSÍTÓ GOOGLE ANALYTICSRŐL
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Díjak és tudnivalók | Profitálj magadból</title>
@@ -37,6 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style/style.css">
     <script src="style/theme.js"></script>
+    <script src="style/consent.js" defer></script>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
@@ -74,10 +65,9 @@
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                         </svg></button>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrrNCX_jp0Sq5mxBZQjjbypom2u6VNRC_wHW2hsLeYZyT-oA/viewform"
-                        target="_blank"
+                    <a href="beszelgetes-menete.html"
                         class="gold-primary-button bg-[#4A4440] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#332E2C] transition-all">
-                        Tedd meg az első lépést!
+                        Ingyenes beszélgetés menete
                     </a>
                 </div>
                 <div class="lg:hidden flex items-center gap-2 flex-shrink-0">
@@ -109,10 +99,9 @@
             <a href="rolam.html" class="block hover:text-[#8C7A6B]">Rólam</a>
             <a href="dijak-es-tudnivalok.html" class="block text-[#8C7A6B] font-semibold">Díjak és tudnivalók</a>
             <a href="kapcsolat.html" class="block hover:text-[#8C7A6B]">Kapcsolat</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrrNCX_jp0Sq5mxBZQjjbypom2u6VNRC_wHW2hsLeYZyT-oA/viewform"
-                target="_blank"
+            <a href="beszelgetes-menete.html"
                 class="gold-primary-button bg-[#4A4440] text-white px-6 py-3 rounded-full text-sm font-medium text-center block mt-2">
-                Tedd meg az első lépést!
+                Ingyenes beszélgetés menete
             </a>
         </div>
     </header>
@@ -216,9 +205,8 @@
                             <p class="text-xs font-medium text-[#8C7A6B]">60 perc | 20 000 Ft</p>
                             <p class="text-xs italic text-[#6B5E54]">Kezd el ott, ahol most vagy.</p>
                         </div>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrrNCX_jp0Sq5mxBZQjjbypom2u6VNRC_wHW2hsLeYZyT-oA/viewform"
-                            target="_blank"
-                            class="w-full inline-flex justify-center items-center bg-[#D4AF37] hover:bg-[#C29F31] text-black text-sm font-medium py-3 px-6 rounded-full transition-all shadow-sm">
+                        <a href="kerdoiv.html"
+                            class="w-full inline-flex justify-center items-center gold-primary-button bg-[#4A4440] text-white text-sm font-medium py-3 px-6 rounded-full transition-all">
                             Kérem ezt a csomagot
                         </a>
                     </div>
@@ -313,9 +301,8 @@
                             <p class="text-xs font-medium text-[#8C7A6B]">4 × 60 perc | 76 000 Ft</p>
                             <p class="text-xs italic text-[#6B5E54]">A félelem maradhat. Te pedig léphetsz.</p>
                         </div>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrrNCX_jp0Sq5mxBZQjjbypom2u6VNRC_wHW2hsLeYZyT-oA/viewform"
-                            target="_blank"
-                            class="w-full inline-flex justify-center items-center bg-[#D4AF37] hover:bg-[#C29F31] text-black text-sm font-medium py-3 px-6 rounded-full transition-all shadow-sm">
+                        <a href="kerdoiv.html"
+                            class="w-full inline-flex justify-center items-center gold-primary-button bg-[#4A4440] text-white text-sm font-medium py-3 px-6 rounded-full transition-all">
                             Kérem ezt a csomagot
                         </a>
                     </div>
@@ -416,9 +403,8 @@
                             <p class="text-xs italic text-[#6B5E54]">A kudarc nem a történet vége, lehet egy új irány
                                 kezdete.</p>
                         </div>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrrNCX_jp0Sq5mxBZQjjbypom2u6VNRC_wHW2hsLeYZyT-oA/viewform"
-                            target="_blank"
-                            class="w-full inline-flex justify-center items-center bg-[#D4AF37] hover:bg-[#C29F31] text-black text-sm font-medium py-3 px-6 rounded-full transition-all shadow-sm">
+                        <a href="kerdoiv.html"
+                            class="w-full inline-flex justify-center items-center gold-primary-button bg-[#4A4440] text-white text-sm font-medium py-3 px-6 rounded-full transition-all">
                             Kérem ezt a csomagot
                         </a>
                     </div>
@@ -511,7 +497,7 @@
                     </p>
                 </div>
                 <div class="pt-4 text-center">
-                    <a href="kapcsolat.html"
+                    <a href="kapcsolat.html#idopontfoglalas"
                         class="gold-primary-button inline-flex justify-center items-center bg-[#4A4440] text-white px-8 py-4 rounded-full text-base font-medium hover:bg-[#332E2C] transition-all">
                         Bejelentkezem az ingyenes beszélgetésre
                     </a>
