@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kapcsolat | Profitálj magadból</title>
-    <meta name="description"
-        content="Lépj kapcsolatba velünk, foglalj időpontot az ingyenes 30 perces konzultációra.">
+    <meta name="description" content="Lépj kapcsolatba velünk, foglalj időpontot az ingyenes 30 perces konzultációra.">
 
     <!-- Open Graph / Facebook / Messenger SEO -->
     <meta property="og:type" content="website">
@@ -63,10 +62,14 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .flow-btn svg { transition: none; }
-            .flow-btn:hover svg { transform: none; }
-        }
+            .flow-btn svg {
+                transition: none;
+            }
 
+            .flow-btn:hover svg {
+                transform: none;
+            }
+        }
     </style>
 </head>
 
@@ -229,23 +232,23 @@
                     })();
 
                     window.addEventListener('message', function (e) {
-    if (e.origin !== 'https://calendly.com') return;
+                        if (e.origin !== 'https://calendly.com') return;
 
-    console.log('[Calendly Message]', e.data);
+                        console.log('[Calendly Message]', e.data);
 
-    if (e.data?.event === 'calendly.event_scheduled') {
-        console.log('[Calendly] Booking event received!');
-        console.log('[Meta Pixel] fbq available:', typeof window.fbq);
+                        if (e.data?.event === 'calendly.event_scheduled') {
+                            console.log('[Calendly] Booking event received!');
+                            console.log('[Meta Pixel] fbq available:', typeof window.fbq);
 
-        if (typeof window.fbq === 'function') {
-            fbq('track', 'Schedule', {
-                content_name: 'Calendly Időpontfoglalás'
-            });
+                            if (typeof window.fbq === 'function') {
+                                fbq('track', 'Schedule', {
+                                    content_name: 'Calendly Időpontfoglalás'
+                                });
 
-            console.log('[Meta Pixel] Schedule command executed!');
-        }
-    }
-});
+                                console.log('[Meta Pixel] Schedule command executed!');
+                            }
+                        }
+                    });
                 </script>
             </section>
 
