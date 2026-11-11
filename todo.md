@@ -31,4 +31,6 @@ Rackhost beállítása, domain hozzárendelése, kapcsolati email létrehozása.
 Impresszum, GDPR, ÁSZF frissítése, hogy jogilag minden biztonságos legyen TELJESEN ÁT KELL ÍRNI. ✅
 Meta Pixel: azonosító beállítása a style/consent.js fájlban, majd események és hozzájárulás tesztelése. ✅
 
-Meta  sikeres jelentkezes mit számol? Új logika kitalálása
+Meta  sikeres jelentkezes Leadeket számol ✅
+
+Ha nem nő a jelentkezések száma, akkor navbar CTA kicserélése kérdőívre mindenhol!
