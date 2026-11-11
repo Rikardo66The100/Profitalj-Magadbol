@@ -53,6 +53,20 @@
             background-color: #4A4440;
             color: #ffffff;
         }
+
+        .flow-btn svg {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .flow-btn:hover svg {
+            transform: translateX(5px);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .flow-btn svg { transition: none; }
+            .flow-btn:hover svg { transform: none; }
+        }
+
     </style>
 </head>
 
@@ -304,7 +318,19 @@
                     </div>
                 </div>
 
-            </div>            
+            </div>
+
+            <!-- BESZÉLGETÉS MENETE GOMB -->
+            <div class="text-center">
+                <a href="beszelgetes-menete.html"
+                    class="flow-btn inline-flex justify-center items-center gap-3 bg-[#F4F0EA] border border-[#D4C5B9] text-[#2C2A29] px-8 py-4 rounded-full text-base font-medium hover:bg-[#EBE5DC] transition-all text-center">
+                    Beszélgetés menete
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </main>
 
