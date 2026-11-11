@@ -34,3 +34,5 @@ Meta Pixel: azonosító beállítása a style/consent.js fájlban, majd esemény
 Meta  sikeres jelentkezes Leadeket számol ✅
 
 Ha nem nő a jelentkezések száma, akkor navbar CTA kicserélése kérdőívre mindenhol!
+
+Mi történik 30 perc alatt.
