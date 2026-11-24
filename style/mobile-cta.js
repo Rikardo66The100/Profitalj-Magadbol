@@ -3,7 +3,7 @@
 (() => {
   'use strict';
   const mq = window.matchMedia('(max-width: 1023.98px)');
-  const src = [...document.querySelectorAll('a.gold-primary-button[href^="kapcsolat.html"]')]
+  const src = [...document.querySelectorAll('a.gold-primary-button[href^="kapcsolat.html"], a.gold-primary-button[href="#idopontfoglalas"]')]
     .find((a) => !a.closest('header, footer, #m-cta'));
   const footer = document.querySelector('footer');
   if (!src || !footer) return;
@@ -13,12 +13,13 @@
   const btn = src.cloneNode(true);
   btn.removeAttribute('id');
   btn.removeAttribute('target');
-  btn.setAttribute('href', 'kapcsolat.html#idopontfoglalas');
+  if (src.getAttribute('href') !== '#idopontfoglalas') btn.setAttribute('href', 'kapcsolat.html#idopontfoglalas');
   bar.appendChild(btn);
   document.body.appendChild(bar);
   document.documentElement.classList.add('m-cta-on');
 
-  const state = { src: true, footer: false };
+  const book = document.getElementById('idopontfoglalas');
+  const state = { src: true, footer: false, book: false };
   const paintBg = () => {
     const c = [document.body, document.documentElement]
       .map((el) => getComputedStyle(el).backgroundColor)
@@ -29,18 +30,19 @@
     document.getElementById('cookie-banner') ||
     document.getElementById('menu-btn')?.getAttribute('aria-expanded') === 'true';
   const update = () => {
-    const show = mq.matches && !state.src && !state.footer && !blocked();
+    const show = mq.matches && !state.src && !state.footer && !state.book && !blocked();
     bar.classList.toggle('is-visible', !!show);
     bar.setAttribute('aria-hidden', show ? 'false' : 'true');
     btn.tabIndex = show ? 0 : -1;
   };
 
   const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => { state[e.target === src ? 'src' : 'footer'] = e.isIntersecting; });
+    entries.forEach((e) => { state[e.target === src ? 'src' : e.target === book ? 'book' : 'footer'] = e.isIntersecting; });
     update();
   });
   io.observe(src);
   io.observe(footer);
+  if (book) io.observe(book);
 
   // süti-banner megjelenése/eltűnése, mobilmenü, téma- és méretváltás
   new MutationObserver(update).observe(document.body, { childList: true });

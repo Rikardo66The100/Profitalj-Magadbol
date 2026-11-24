@@ -1,168 +1,320 @@
 <!DOCTYPE html>
 <html lang="hu" class="scroll-smooth">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ingyenes 30 perces konzultáció | Profitálj magadból</title>
-<meta name="description" content="Évek óta változtatnál, de mindig lebeszéled magad? Foglalj ingyenes 30 perces online konzultációt Barta Ilonával.">
-<meta name="robots" content="noindex">
-<link rel="preconnect" href="https://assets.calendly.com" crossorigin>
-<link rel="preconnect" href="https://calendly.com" crossorigin>
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<link rel="stylesheet" href="style/style.css">
-<link rel="stylesheet" href="style/mobile-cta.css">
-<script src="style/theme.js"></script>
-<script src="style/consent.js" defer></script>
-<link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
-<style>
-  #sticky-cta{position:fixed;inset:auto 0 0 0;z-index:40;padding:.625rem 1rem max(.625rem,env(safe-area-inset-bottom));border-top:1px solid rgba(140,122,107,.25);transform:translateY(110%);visibility:hidden;transition:transform .28s ease,visibility 0s linear .28s}
-  #sticky-cta.is-visible{transform:none;visibility:visible;transition:transform .28s ease}
-  #sticky-cta a{display:flex;width:100%;min-height:3.25rem}
-  body.has-sticky{padding-bottom:calc(4.75rem + env(safe-area-inset-bottom))}
-  .pain-list li{font-variant-numeric:tabular-nums}
-  @media (prefers-reduced-motion:reduce){#sticky-cta,#sticky-cta.is-visible{transition:none}}
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingyenes 30 perces konzultáció | Profitálj magadból</title>
+    <meta name="description"
+        content="Évek óta változtatnál, de mindig lebeszéled magad? Foglalj ingyenes 30 perces online konzultációt Barta Ilonával.">
+
+    
+    <link rel="canonical" href="https://profitaljmagadbol.hu/konzultacio.html">
+    <link rel="preconnect" href="https://assets.calendly.com" crossorigin>
+    <link rel="preconnect" href="https://calendly.com" crossorigin>
+
+        <!-- Open Graph / Facebook / Messenger SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://profitaljmagadbol.hu/konzultacio.html">
+    <meta property="og:site_name" content="Profitálj magadból">
+    <meta property="og:title" content="Ingyenes 30 perces konzultáció | Profitálj magadból">
+    <meta property="og:description"
+        content="Évek óta változtatnál, de mindig lebeszéled magad? Foglalj ingyenes konzultációt!">
+    <meta property="og:image" content="https://profitaljmagadbol.hu/imgs/profitaljmagadbol_logo.jpg">
+    <meta property="og:image:secure_url" content="https://profitaljmagadbol.hu/imgs/profitaljmagadbol_logo.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1832">
+    <meta property="og:image:height" content="858">
+    <meta property="og:image:alt" content="Profitálj magadból logó">
+    <meta property="og:locale" content="hu_HU">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://profitaljmagadbol.hu/imgs/profitaljmagadbol_logo.jpg">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/mobile-cta.css">
+    <script src="style/theme.js"></script>
+    <script src="style/consent.js" defer></script>
+    <script src="style/mobile-cta.js" defer></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
+    <link rel="manifest" href="imgs/site.webmanifest">
 </head>
-<body class="bg-[#FBF9F5] text-[#2C2A29] font-sans antialiased text-base leading-relaxed flex flex-col min-h-screen relative">
 
-<header class="sticky top-0 z-50 bg-[#FBF9F5]/90 backdrop-blur-md border-b border-[#EBE5DC]">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center h-16">
-    <span class="text-lg font-serif tracking-wider font-semibold text-[#4A4440]">PROFITÁLJ <span class="font-light text-[#8C7A6B]">MAGADBÓL</span></span>
-    <div class="flex items-center gap-2">
-      <button type="button" class="theme-toggle" aria-label="Sötét mód bekapcsolása" title="Sötét mód bekapcsolása" aria-pressed="false"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-      <a href="#idopontfoglalas" class="gold-primary-button bg-[#4A4440] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all">Foglalj időpontot</a>
-    </div>
-  </div>
-</header>
+<body
+    class="bg-[#FBF9F5] text-[#2C2A29] font-sans antialiased text-base leading-relaxed flex flex-col min-h-screen relative">
 
-<main>
-<!-- HERO -->
-<section class="py-10 md:py-16">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-    <div class="lg:col-span-7 space-y-6">
-      <p class="inline-block bg-[#F4F0EA] px-4 py-1.5 rounded-full border border-[#EBE5DC] text-sm font-semibold">Barta Ilona <span class="font-light text-[#8C7A6B]">• intuitív life coach</span></p>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold leading-[1.1] tracking-tight">
-        Évek óta változtatni akarsz, de amikor megtennéd az első lépést, <span class="text-[#8C7A6B]">MINDIG LEBESZÉLED MAGAD?</span>
-      </h1>
-      <p class="text-xl sm:text-2xl font-bold leading-snug">Nem azért, mert nem próbálkoztál eleget, hanem mert a félelmeid erősebbek nálad.</p>
-      <div class="pt-2 space-y-3">
-        <a href="#idopontfoglalas" class="gold-primary-button bg-[#4A4440] text-white px-8 py-4 rounded-full text-lg font-bold transition-all inline-flex justify-center w-full sm:w-auto">Foglalok egy ingyenes időpontot</a>
-        <p class="text-sm text-[#6B5E54]">30 perc • online • ingyenes • kötelezettség nélkül</p>
-      </div>
-    </div>
-    <div class="lg:col-span-5">
-      <img src="imgs/portre.jpg" alt="Barta Ilona, life coach" width="896" height="1200" fetchpriority="high" class="w-full max-w-sm mx-auto rounded-3xl object-cover aspect-[4/5] shadow-lg">
-    </div>
-  </div>
-</section>
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-[#FBF9F5]/90 backdrop-blur-md border-b border-[#EBE5DC]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-xl font-serif tracking-wider font-semibold text-[#4A4440]">
+                        PROFITÁLJ <span class="font-light text-[#8C7A6B]">MAGADBÓL</span>
+                    </a>
+                </div>
+                <nav class="hidden lg:flex space-x-8 whitespace-nowrap text-base font-medium tracking-wide">
+                    <a href="index.html" class="hover:text-[#8C7A6B] transition-colors">Kezdőlap</a>
+                    <a href="rolam.html" class="hover:text-[#8C7A6B] transition-colors">Rólam</a>
+                    <a href="dijak-es-tudnivalok.html" class="hover:text-[#8C7A6B] transition-colors">Díjak és
+                        tudnivalók</a>
+                    <a href="kapcsolat.html" class="hover:text-[#8C7A6B] transition-colors">Kapcsolat</a>
+<a href="konzultacio.html" class="text-[#8C7A6B] transition-colors">Konzultáció</a>
+                </nav>
+                <div class="hidden lg:flex items-center gap-3">
+                    <button type="button" class="theme-toggle" aria-label="Sötét mód bekapcsolása"
+                        title="Sötét mód bekapcsolása" aria-pressed="false"><svg class="icon-sun" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4" />
+                            <path
+                                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                        </svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg></button>
+                    <a href="#idopontfoglalas"
+                        class="gold-primary-button bg-[#4A4440] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#332E2C] transition-all">
+                        Foglalj időpontot</a>
+                </div>
+                <div class="lg:hidden flex items-center gap-2 flex-shrink-0">
+                    <button type="button" class="theme-toggle" aria-label="Sötét mód bekapcsolása"
+                        title="Sötét mód bekapcsolása" aria-pressed="false"><svg class="icon-sun" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4" />
+                            <path
+                                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                        </svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg></button>
+                    <button id="menu-btn" class="text-[#4A4440]" aria-label="Menü megnyitása" aria-expanded="false"
+                        aria-controls="mobile-menu"><svg class="w-7 h-7 burger" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round">
+                            <line class="b1" x1="4" y1="6" x2="20" y2="6" />
+                            <line class="b2" x1="4" y1="12" x2="20" y2="12" />
+                            <line class="b3" x1="4" y1="18" x2="20" y2="18" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="lg:hidden bg-[#FBF9F5] border-b border-[#EBE5DC] px-6 pt-3 pb-6 space-y-4 text-base">
+            <a href="index.html" class="block hover:text-[#8C7A6B]">Kezdőlap</a>
+            <a href="rolam.html" class="block hover:text-[#8C7A6B]">Rólam</a>
+            <a href="dijak-es-tudnivalok.html" class="block hover:text-[#8C7A6B]">Díjak és tudnivalók</a>
+            <a href="kapcsolat.html" class="block hover:text-[#8C7A6B]">Kapcsolat</a>
+<a href="konzultacio.html" class="block text-[#8C7A6B] font-semibold">Konzultáció</a>
+            <a href="#idopontfoglalas"
+                class="gold-primary-button bg-[#4A4440] text-white px-6 py-3 rounded-full text-sm font-medium text-center block mt-2">
+                Foglalj időpontot</a>
+        </div>
+    </header>
 
-<!-- FÁJDALOMPONTOK -->
-<section class="py-12 md:py-16 bg-[#F4F0EA]">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6">
-    <h2 class="text-3xl sm:text-4xl font-serif font-extrabold leading-tight mb-8">Ismerős? <span class="text-[#8C7A6B]">Nem a félelmet fogod érezni, hanem azt, hogy…</span></h2>
-    <ul class="pain-list space-y-3">
-      <li class="bg-white border border-[#EBE5DC] rounded-2xl px-5 py-4 text-lg font-semibold">Hetek óta nézem az álláshirdetést. Mire rászánom magam, lejár a jelentkezési határidő.</li>
-      <li class="bg-white border border-[#EBE5DC] rounded-2xl px-5 py-4 text-lg font-semibold">Este már eldöntöm, hogy változtatni fogok. Reggelre ott tartok megint, hogy inkább várok.</li>
-      <li class="bg-white border border-[#EBE5DC] rounded-2xl px-5 py-4 text-lg font-semibold">Azt mondom magamnak, ebben még fejlődnöm kell. Aztán végül mégsem adom be a jelentkezésemet.</li>
-      <li class="bg-white border border-[#EBE5DC] rounded-2xl px-5 py-4 text-lg font-semibold">Megfelelek a feltételeknek, mégis azon gondolkodom, miért választanának pont engem.</li>
-      <li class="bg-white border border-[#EBE5DC] rounded-2xl px-5 py-4 text-lg font-semibold">Megint elvállaltam valamit, pedig azt az estét saját terveimre szántam.</li>
-      <li class="bg-white border border-[#EBE5DC] rounded-2xl px-5 py-4 text-lg font-semibold">Azt mondogatom magamnak, hogy nekem így jó, pedig már régóta mást szeretnék.</li>
-      <li class="bg-white border border-[#EBE5DC] rounded-2xl px-5 py-4 text-lg font-semibold">Már kinéztem egy képzést / tanfolyamot / programot, aztán valaki megkérdezte, minek az nekem. Azóta halogatom a jelentkezést.</li>
-    </ul>
-  </div>
-</section>
+    <!-- HERO SECTION -->
+    <section class="py-12 md:py-20 bg-[#FBF9F5]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-block bg-[#F4F0EA] px-5 py-2 rounded-full border border-[#EBE5DC] shadow-xs">
+                    <div class="flex flex-col sm:flex-row items-center sm:gap-3 text-center sm:text-left">
+                        <span class="text-sm font-semibold tracking-wide text-[#2C2A29]">Barta Ilona</span>
+                        <span class="hidden sm:inline text-[#8C7A6B]">•</span>
+                        <span class="text-sm tracking-wide font-light text-[#8C7A6B]">intuitív life coach</span>
+                    </div>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold text-[#2C2A29] leading-tight">
+                    Évek óta változtatni akarsz, de amikor megtennéd az első lépést, <span class="text-[#8C7A6B]">MINDIG LEBESZÉLED MAGAD?</span>
+                </h1>
+                <p class="text-xl sm:text-2xl font-bold text-[#2C2A29] leading-snug">
+                    Nem azért, mert nem próbálkoztál eleget, hanem mert a félelmeid erősebbek nálad.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                    <a href="#idopontfoglalas" class="gold-primary-button inline-flex justify-center items-center bg-[#4A4440] text-white px-8 py-4 rounded-full text-base font-bold hover:bg-[#332E2C] transition-all text-center">Kérek egy ingyenes időpontot</a>
+                </div>
+                <p class="text-sm text-[#8C7A6B] italic pt-1">30 perc • online • ingyenes • kötelezettség nélkül</p>
+            </div>
+            <div class="lg:col-span-5 flex justify-center items-center">
+                <div class="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden border border-[#EBE5DC] shadow-xl bg-[#F4F0EA] flex items-center justify-center p-2">
+                    <img src="imgs/portré.jpg" alt="Barta Ilona" width="960" height="1286" decoding="async" fetchpriority="high" class="w-full h-full object-contain rounded-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- VÁGYOTT EREDMÉNY -->
-<section class="py-12 md:py-20">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6">
-    <h2 class="text-3xl sm:text-5xl font-serif font-extrabold leading-tight mb-3">Kezedbe adom a konkrét lépéseket, hogy…</h2>
-    <ul class="grid sm:grid-cols-2 gap-4 my-8">
-      <li class="flex gap-3 items-start text-xl font-bold"><span aria-hidden="true" class="text-[#B8902E]">✓</span>végre olyan munkahelyen dolgozz, amit szeretsz</li>
-      <li class="flex gap-3 items-start text-xl font-bold"><span aria-hidden="true" class="text-[#B8902E]">✓</span>végre merj változtatni</li>
-      <li class="flex gap-3 items-start text-xl font-bold"><span aria-hidden="true" class="text-[#B8902E]">✓</span>beadd a jelentkezésedet</li>
-      <li class="flex gap-3 items-start text-xl font-bold"><span aria-hidden="true" class="text-[#B8902E]">✓</span>elhidd, hogy van esélyed a jobb életre</li>
-      <li class="flex gap-3 items-start text-xl font-bold"><span aria-hidden="true" class="text-[#B8902E]">✓</span>végre nemet tudj mondani</li>
-      <li class="flex gap-3 items-start text-xl font-bold"><span aria-hidden="true" class="text-[#B8902E]">✓</span>végre jelentkezz a képzésre / tanfolyamra / programra</li>
-    </ul>
-    <p class="text-3xl sm:text-5xl font-serif font-extrabold leading-tight">Végre <span class="text-[#8C7A6B]">ÖNAZONOS ÉLETET</span> fogsz élni, mert valódi <span class="text-[#8C7A6B]">VÁLTOZÁS</span> fog beállni az életedbe.</p>
-    <div class="mt-8">
-      <a href="#idopontfoglalas" class="gold-primary-button bg-[#4A4440] text-white px-8 py-4 rounded-full text-lg font-bold transition-all inline-flex justify-center w-full sm:w-auto">Ezt akarom – időpontot foglalok</a>
-    </div>
-  </div>
-</section>
+    <main class="space-y-16 py-12 flex-grow">
+        <!-- FÁJDALOMPONTOK -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-[#F4F0EA] p-6 sm:p-12 rounded-3xl border border-[#EBE5DC] space-y-6">
+                <h2 class="text-3xl sm:text-4xl font-serif font-extrabold text-[#2C2A29] leading-tight">
+                    Nem a félelmet fogod érezni, hanem azt, hogy…
+                </h2>
+                <ul class="space-y-3">
+                    <li class="bg-white px-5 py-4 rounded-2xl border border-[#EBE5DC] text-lg font-bold text-[#2C2A29]">Hetek óta nézem az álláshirdetést. Mire rászánom magam, lejár a jelentkezési határidő.</li>
+                    <li class="bg-white px-5 py-4 rounded-2xl border border-[#EBE5DC] text-lg font-bold text-[#2C2A29]">Este már eldöntöm, hogy változtatni fogok. Reggelre ott tartok megint, hogy inkább várok.</li>
+                    <li class="bg-white px-5 py-4 rounded-2xl border border-[#EBE5DC] text-lg font-bold text-[#2C2A29]">Azt mondom magamnak, ebben még fejlődnöm kell. Aztán végül mégsem adom be a jelentkezésemet.</li>
+                    <li class="bg-white px-5 py-4 rounded-2xl border border-[#EBE5DC] text-lg font-bold text-[#2C2A29]">Megfelelek a feltételeknek, mégis azon gondolkodom, miért választanának pont engem.</li>
+                    <li class="bg-white px-5 py-4 rounded-2xl border border-[#EBE5DC] text-lg font-bold text-[#2C2A29]">Megint elvállaltam valamit, pedig azt az estét saját terveimre szántam.</li>
+                    <li class="bg-white px-5 py-4 rounded-2xl border border-[#EBE5DC] text-lg font-bold text-[#2C2A29]">Azt mondogatom magamnak, hogy nekem így jó, pedig már régóta mást szeretnék.</li>
+                    <li class="bg-white px-5 py-4 rounded-2xl border border-[#EBE5DC] text-lg font-bold text-[#2C2A29]">Már kinéztem egy képzést / tanfolyamot / programot, aztán valaki megkérdezte, minek az nekem. Azóta halogatom a jelentkezést.</li>
+                </ul>
+            </div>
+        </section>
 
-<!-- FOGLALÁS -->
-<section id="idopontfoglalas" class="pb-16 scroll-mt-24">
-  <div class="max-w-4xl mx-auto bg-white px-2 py-4 sm:p-8 rounded-3xl border border-[#EBE5DC] shadow-sm space-y-6">
-    <div class="text-center space-y-2 px-2">
-      <h2 class="text-3xl font-serif font-extrabold">Foglald le az ingyenes konzultációdat</h2>
-      <p class="text-sm text-[#6B5E54]">Válassz egy neked megfelelő időpontot – 30 perc, online, kötelezettség nélkül.</p>
-    </div>
-    <div id="calendly-embed" aria-label="Időpontfoglaló naptár"></div>
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- VÁGYOTT EREDMÉNY -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <h2 class="text-3xl sm:text-5xl font-serif font-extrabold text-[#2C2A29] leading-tight">
+                Kezedbe adom a konkrét lépéseket, hogy…
+            </h2>
+            <ul class="grid sm:grid-cols-2 gap-4">
+                <li class="bg-white px-5 py-4 rounded-2xl border border-[#EBE5DC] text-lg font-bold text-[#2C2A29] flex gap-3 items-start"><span aria-hidden="true" class="text-[#8C7A6B]">✓</span><span>végre olyan munkahelyen dolgozz, amit szeretsz</span></li>
+                <li class="bg-white px-5 py-4 rounded-2xl border border-[#EBE5DC] text-lg font-bold text-[#2C2A29] flex gap-3 items-start"><span aria-hidden="true" class="text-[#8C7A6B]">✓</span><span>végre merj változtatni</span></li>
+                <li class="bg-white px-5 py-4 rounded-2xl border border-[#EBE5DC] text-lg font-bold text-[#2C2A29] flex gap-3 items-start"><span aria-hidden="true" class="text-[#8C7A6B]">✓</span><span>beadd a jelentkezésedet</span></li>
+                <li class="bg-white px-5 py-4 rounded-2xl border border-[#EBE5DC] text-lg font-bold text-[#2C2A29] flex gap-3 items-start"><span aria-hidden="true" class="text-[#8C7A6B]">✓</span><span>elhidd, hogy van esélyed a jobb életre</span></li>
+                <li class="bg-white px-5 py-4 rounded-2xl border border-[#EBE5DC] text-lg font-bold text-[#2C2A29] flex gap-3 items-start"><span aria-hidden="true" class="text-[#8C7A6B]">✓</span><span>végre nemet tudj mondani</span></li>
+                <li class="bg-white px-5 py-4 rounded-2xl border border-[#EBE5DC] text-lg font-bold text-[#2C2A29] flex gap-3 items-start"><span aria-hidden="true" class="text-[#8C7A6B]">✓</span><span>végre jelentkezz a képzésre / tanfolyamra / programra</span></li>
+            </ul>
+            <p class="text-3xl sm:text-5xl font-serif font-extrabold text-[#2C2A29] leading-tight">
+                Végre <span class="text-[#8C7A6B]">ÖNAZONOS ÉLETET</span> fogsz élni, mert valódi <span class="text-[#8C7A6B]">VÁLTOZÁS</span> fog beállni az életedbe.
+            </p>
+            <a href="#idopontfoglalas" class="gold-primary-button inline-flex justify-center items-center bg-[#4A4440] text-white px-8 py-4 rounded-full text-base font-bold hover:bg-[#332E2C] transition-all text-center w-full sm:w-auto">Ezt akarom – időpontot foglalok</a>
+        </section>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <!-- CALENDLY IDŐPONTFOGLALÓ  -->
+            <section id="idopontfoglalas"
+                class="max-w-4xl mx-auto bg-white px-2 py-4 sm:p-8 rounded-3xl border border-[#EBE5DC] shadow-sm space-y-6">
+                <div class="text-center space-y-2">
+                    <h2 class="text-3xl font-serif text-[#2C2A29]">Foglalj időpontot konzultációra</h2>
+                    <p class="text-sm text-[#6B5E54]">Válassz ki egy neked megfelelő időpontot az alábbi naptárból egy
+                        30 perces, ingyenes első beszélgetésre!</p>
+                </div>
+
+                <!-- Calendly beágyazott modul konténer -->
+                <div id="calendly-embed" aria-label="Időpontfoglaló naptár"></div>
+
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
+                    async></script>
+                <script>
+                    (function () {
+                        var host = document.getElementById('calendly-embed');
+                        var BASE_URL = 'https://calendly.com/ilonabarta9/30min';
+
+                        // false (free Calendly plan): Calendly ignores colour parameters, so the widget is
+                        //   recoloured with CSS filters (see style.css, "Calendly booking box") and a theme
+                        //   switch is instant - no reload.
+                        // true (paid plan): the widget gets the colours below via URL and is reloaded on a
+                        //   theme switch; the CSS filters are switched off.
+                        var NATIVE_COLORS = false;
+                        var COLORS = {
+                            light: 'background_color=fffcf5&text_color=14110d&primary_color=b8902e',
+                            dark: 'background_color=14110c&text_color=fff9ea&primary_color=e3be4a'
+                        };
+
+                        var mounted = false, currentMode = null;
+
+                        function mode() {
+                            return document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+                        }
+
+                        function mount() {
+                            if (!window.Calendly) return;
+                            var m = mode();
+                            if (mounted && (!NATIVE_COLORS || m === currentMode)) return;
+                            mounted = true;
+                            currentMode = m;
+                            host.innerHTML = '';
+                            Calendly.initInlineWidget({
+                                url: NATIVE_COLORS ? BASE_URL + '?' + COLORS[m] : BASE_URL,
+                                parentElement: host
+                            });
+                            host.classList.add('is-ready');
+                        }
+
+                        if (NATIVE_COLORS) host.classList.add('native-colors');
+
+                        // Wait for Calendly's script (it loads async)
+                        var tries = 0;
+                        var wait = setInterval(function () {
+                            if (window.Calendly || ++tries > 100) { clearInterval(wait); mount(); }
+                        }, 50);
+
+                        // Paid colours only: reload the widget in the new theme, fast
+                        document.addEventListener('themechange', function () {
+                            if (!NATIVE_COLORS) return;
+                            host.classList.remove('is-ready');
+                            mount();
+                        });
+
+                        // Fit the box to the widget's real height when Calendly reports it
+                        window.addEventListener('message', function (e) {
+                            if (e.origin !== 'https://calendly.com' || !e.data) return;
+                            if (e.data.event === 'calendly.page_height' && e.data.payload) {
+                                var h = parseInt(e.data.payload.height, 10);
+                                if (h > 0) host.style.height = Math.max(h, 620) + 'px';
+                            }
+                        });
+                    })();
+
+                    window.addEventListener('message', function (e) {
+                        if (e.origin !== 'https://calendly.com') return;
+
+                        console.log('[Calendly Message]', e.data);
+
+                        if (e.data?.event === 'calendly.event_scheduled') {
+                            console.log('[Calendly] Booking event received!');
+                            console.log('[Meta Pixel] fbq available:', typeof window.fbq);
+
+                            if (typeof window.fbq === 'function') {
+                                fbq('track', 'Schedule', {
+                                    content_name: 'Calendly Időpontfoglalás'
+                                });
+
+                                console.log('[Meta Pixel] Schedule command executed!');
+                            }
+                        }
+                    });
+                </script>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-[#2C2A29] text-[#FBF9F5] py-12">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="text-lg font-serif tracking-wider font-semibold">PROFITÁLJ MAGADBÓL</span>
+                <p class="text-xs text-[#A89F95] mt-1">&copy; 2026 Minden jog fenntartva.</p>
+            </div>
+            <div
+                class="flex flex-wrap justify-center md:justify-end items-center gap-x-6 gap-y-2 text-sm text-[#A89F95]">
+                <a href="index.html" class="hover:text-white transition-colors">Kezdőlap</a>
+                <a href="rolam.html" class="hover:text-white transition-colors">Rólam</a>
+                <a href="dijak-es-tudnivalok.html" class="hover:text-white transition-colors">Díjak és tudnivalók</a>
+                <a href="kapcsolat.html" class="hover:text-white transition-colors">Kapcsolat</a>
+<a href="konzultacio.html" class="hover:text-white transition-colors">Konzultáció</a>
+                <a href="aszf.html" class="hover:text-white transition-colors">ÁSZF</a>
+                <a href="adatkezelesi-tajekoztato.html" class="hover:text-white transition-colors">Adatkezelés</a>
+                <a href="impresszum.html" class="hover:text-white transition-colors">Impresszum</a>
+            </div>
+        </div>
+    </footer>
+
     <script>
-      (function () {
-        var host = document.getElementById('calendly-embed'), tries = 0;
-        var wait = setInterval(function () {
-          if (window.Calendly || ++tries > 100) {
-            clearInterval(wait);
-            if (window.Calendly) { Calendly.initInlineWidget({ url: 'https://calendly.com/ilonabarta9/30min', parentElement: host }); host.classList.add('is-ready'); }
-          }
-        }, 50);
-        window.addEventListener('message', function (e) {
-          if (e.origin !== 'https://calendly.com' || !e.data) return;
-          if (e.data.event === 'calendly.page_height' && e.data.payload) {
-            var h = parseInt(e.data.payload.height, 10);
-            if (h > 0) host.style.height = Math.max(h, 620) + 'px';
-          }
-          if (e.data.event === 'calendly.event_scheduled' && typeof window.fbq === 'function') {
-            fbq('track', 'Schedule', { content_name: 'Calendly Időpontfoglalás' });
-          }
+        // Mobil menü
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            var mm = document.getElementById('mobile-menu'), mb = document.getElementById('menu-btn');
+            var open = mm.classList.toggle('open');
+            mb.classList.toggle('is-open', open);
+            mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+            mb.setAttribute('aria-label', open ? 'Menü bezárása' : 'Menü megnyitása');
         });
-      })();
     </script>
-  </div>
-</section>
-</main>
-
-<footer class="bg-[#2C2A29] text-[#FBF9F5] py-8 mt-auto">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-[#A89F95]">
-    <span>&copy; 2026 Profitálj magadból</span>
-    <span class="flex gap-5"><a href="aszf.html" class="hover:text-white">ÁSZF</a><a href="adatkezelesi-tajekoztato.html" class="hover:text-white">Adatkezelés</a><a href="impresszum.html" class="hover:text-white">Impresszum</a></span>
-  </div>
-</footer>
-
-<!-- RAGADÓS CTA: hero-gomb kigörgetésekor jelenik meg, a foglalási szekciónál eltűnik -->
-<div id="sticky-cta" aria-hidden="true">
-  <a href="#idopontfoglalas" tabindex="-1" class="gold-primary-button bg-[#4A4440] text-white rounded-full text-base font-bold items-center justify-center">Foglalj ingyenes időpontot</a>
-</div>
-<script>
-  (function () {
-    var bar = document.getElementById('sticky-cta'), btn = bar.firstElementChild;
-    var hero = document.querySelector('main a.gold-primary-button'), book = document.getElementById('idopontfoglalas');
-    var s = { hero: true, book: false };
-    function paint() {
-      var c = getComputedStyle(document.body).backgroundColor;
-      bar.style.backgroundColor = c && c !== 'rgba(0, 0, 0, 0)' ? c : '#FBF9F5';
-    }
-    function update() {
-      var show = !s.hero && !s.book && !document.getElementById('cookie-banner');
-      bar.classList.toggle('is-visible', show);
-      bar.setAttribute('aria-hidden', show ? 'false' : 'true');
-      btn.tabIndex = show ? 0 : -1;
-    }
-    new IntersectionObserver(function (es) {
-      es.forEach(function (e) { s[e.target === hero ? 'hero' : 'book'] = e.isIntersecting; });
-      update();
-    }).observe(hero);
-    var io2 = new IntersectionObserver(function (es) { s.book = es[0].isIntersecting; update(); });
-    io2.observe(book);
-    new MutationObserver(update).observe(document.body, { childList: true });
-    document.addEventListener('themechange', function () { setTimeout(paint, 700); });
-    document.body.classList.add('has-sticky');
-    paint(); update();
-  })();
-</script>
 </body>
+
 </html>
